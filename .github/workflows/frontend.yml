@@ -363,7 +363,7 @@ jobs:
       - name: Enable corepack
         run: corepack enable
       - name: Install kubectl
-        uses: azure/setup-kubectl@v4
+        uses: azure/setup-kubectl@v5
       - name: Install helm
         uses: azure/setup-helm@v4.3.0
       - name: Install terraform
