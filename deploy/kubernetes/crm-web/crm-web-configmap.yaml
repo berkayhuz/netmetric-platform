@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: crm-web-env
+  namespace: netmetric
+  labels:
+    app.kubernetes.io/name: crm-web
+    app.kubernetes.io/part-of: netmetric
+data:
+  NEXT_PUBLIC_APP_NAME: "NetMetric CRM"
+  NEXT_PUBLIC_APP_ORIGIN: "https://crm.netmetric.net"
+  NEXT_PUBLIC_CRM_URL: "https://crm.netmetric.net"
+  NEXT_PUBLIC_AUTH_URL: "https://auth.netmetric.net"
+  NEXT_PUBLIC_API_BASE_URL: "https://api.netmetric.net"
+  NEXT_PUBLIC_NETMETRIC_COOKIE_DOMAIN: ".netmetric.net"
+  CRM_API_BASE_URL: "http://api-gateway"
+  CRM_ACCOUNT_API_BASE_URL: "http://api-gateway"
+  CRM_ACCESS_COOKIE_NAME: "__Secure-netmetric-access"

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Moq" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\packages\dotnet\src\NetMetric.Tenancy\NetMetric.Tenancy.csproj" />
+    <ProjectReference Include="..\..\..\src\modules\PipelineManagement\NetMetric.CRM.PipelineManagement.Application\NetMetric.CRM.PipelineManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\src\modules\PipelineManagement\NetMetric.CRM.PipelineManagement.Infrastructure\NetMetric.CRM.PipelineManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\src\modules\OpportunityManagement\NetMetric.CRM.OpportunityManagement.Contracts\NetMetric.CRM.OpportunityManagement.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\search\src\NetMetric.Search.Application\NetMetric.Search.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\search\src\NetMetric.Search.Contracts\NetMetric.Search.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  
+</Project>

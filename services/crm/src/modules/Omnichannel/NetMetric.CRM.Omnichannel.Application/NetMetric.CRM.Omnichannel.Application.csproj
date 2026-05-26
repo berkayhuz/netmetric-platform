@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Exceptions\NetMetric.Exceptions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Security.EndpointGuard\NetMetric.Security.EndpointGuard.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.Omnichannel.Contracts\NetMetric.CRM.Omnichannel.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.Omnichannel.Domain\NetMetric.CRM.Omnichannel.Domain.csproj" />
+  </ItemGroup>
+  
+</Project>

@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: notification-worker-env
+  namespace: netmetric
+data:
+  DOTNET_ENVIRONMENT: "Production"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-worker
+  namespace: netmetric
+spec:
+  replicas: 2
+  selector: { matchLabels: { app.kubernetes.io/name: notification-worker } }
+  template:
+    metadata:
+      {
+        labels:
+          { app.kubernetes.io/name: notification-worker, app.kubernetes.io/part-of: netmetric },
+      }
+    spec:
+      serviceAccountName: notification-worker
+      containers:
+        - name: notification-worker
+          image: ghcr.io/netmetric/notification-worker:${IMAGE_TAG}
+          envFrom:
+            [
+              { configMapRef: { name: notification-worker-env } },
+              { secretRef: { name: notification-worker-secrets } },
+            ]
+          startupProbe:
+            {
+              exec:
+                {
+                  command:
+                    [
+                      "sh",
+                      "-c",
+                      'test -n "$Notification__RabbitMq__Host" -o -n "$Messaging__RabbitMq__Uri"',
+                    ],
+                },
+              failureThreshold: 6,
+              periodSeconds: 10,
+            }
+          securityContext:
+            {
+              allowPrivilegeEscalation: false,
+              readOnlyRootFilesystem: true,
+              capabilities: { drop: ["ALL"] },
+              runAsNonRoot: true,
+              seccompProfile: { type: RuntimeDefault },
+            }
+          resources:
+            { requests: { cpu: 100m, memory: 192Mi }, limits: { cpu: 500m, memory: 512Mi } }
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: notification-worker
+  namespace: netmetric
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: notification-worker
+  namespace: netmetric
+spec:
+  minAvailable: 1
+  selector: { matchLabels: { app.kubernetes.io/name: notification-worker } }

@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Entities\NetMetric.Entities.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.SharedKernel\NetMetric.CRM.SharedKernel.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.Types\NetMetric.CRM.Types.csproj" />
+  </ItemGroup>
+
+</Project>

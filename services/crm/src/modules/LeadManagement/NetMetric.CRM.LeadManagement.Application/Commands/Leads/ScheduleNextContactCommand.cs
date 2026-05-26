@@ -1,0 +1,10 @@
+// <copyright file="ScheduleNextContactCommand.cs" company="NetMetric">
+// Copyright (c) 2026 NetMetric. All rights reserved.
+// NetMetric is proprietary software. See the LICENSE file in the repository root.
+// </copyright>
+
+using MediatR;
+
+namespace NetMetric.CRM.LeadManagement.Application.Commands.Leads;
+
+public sealed record ScheduleNextContactCommand(Guid LeadId, DateTime? NextContactDate) : IRequest<Unit>;

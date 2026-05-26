@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Authorization.Claims\NetMetric.Authorization.Claims.csproj" />
+    <ProjectReference Include="..\NetMetric.CurrentUser\NetMetric.CurrentUser.csproj" />
+    <ProjectReference Include="..\NetMetric.Tenancy\NetMetric.Tenancy.csproj" />
+  </ItemGroup>
+
+</Project>

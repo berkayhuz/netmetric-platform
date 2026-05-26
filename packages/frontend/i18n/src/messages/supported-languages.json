@@ -1,0 +1,14 @@
+[
+  {
+    "code": "en-US",
+    "messageFile": "en.json",
+    "nativeName": "English",
+    "englishName": "English"
+  },
+  {
+    "code": "tr-TR",
+    "messageFile": "tr.json",
+    "nativeName": "Türkçe",
+    "englishName": "Turkish"
+  }
+]

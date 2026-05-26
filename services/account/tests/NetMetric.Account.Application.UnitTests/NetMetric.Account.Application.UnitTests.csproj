@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NetMetric.Account.Application\NetMetric.Account.Application.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Account.Domain\NetMetric.Account.Domain.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Account.Contracts\NetMetric.Account.Contracts.csproj" />
+  </ItemGroup>
+</Project>

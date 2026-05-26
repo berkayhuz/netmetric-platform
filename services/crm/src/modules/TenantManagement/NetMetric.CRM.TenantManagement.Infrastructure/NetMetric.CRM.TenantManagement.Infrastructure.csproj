@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore\NetMetric.Persistence.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Tenancy\NetMetric.Tenancy.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.TenantManagement.Application\NetMetric.CRM.TenantManagement.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.TenantManagement.Domain\NetMetric.CRM.TenantManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

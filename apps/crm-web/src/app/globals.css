@@ -1,0 +1,103 @@
+@import "@netmetric/ui/styles/globals.css";
+@import "react-grid-layout/css/styles.css";
+@import "react-resizable/css/styles.css";
+
+:root {
+  --crm-hero-glow:
+    radial-gradient(circle at 12% 18%, rgb(255 183 77 / 0.28), transparent 28%),
+    radial-gradient(circle at 86% 8%, rgb(20 184 166 / 0.22), transparent 30%),
+    linear-gradient(135deg, rgb(255 250 242 / 0.96), rgb(245 251 248 / 0.92));
+  --crm-page-grid:
+    linear-gradient(rgb(15 23 42 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(15 23 42 / 0.035) 1px, transparent 1px);
+}
+
+.dark {
+  --crm-hero-glow:
+    radial-gradient(circle at 14% 18%, rgb(251 146 60 / 0.18), transparent 28%),
+    radial-gradient(circle at 88% 10%, rgb(45 212 191 / 0.14), transparent 30%),
+    linear-gradient(135deg, rgb(17 24 39 / 0.96), rgb(10 18 30 / 0.94));
+  --crm-page-grid:
+    linear-gradient(rgb(255 255 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgb(255 183 77 / 0.22), transparent 34rem),
+    radial-gradient(circle at bottom right, rgb(20 184 166 / 0.16), transparent 34rem),
+    hsl(var(--background));
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: rgb(56 189 248 / 0.25);
+  border-radius: 8px;
+}
+
+.crm-dashboard-grid-canvas {
+  --crm-dashboard-cols: 12;
+  --crm-dashboard-gap: 12px;
+  --crm-dashboard-row-height: 32px;
+  --crm-dashboard-cell-step-x: 8.333%;
+  --crm-dashboard-cell-step-y: 44px;
+  border-radius: 18px;
+  background-image: none;
+  box-shadow: none;
+}
+
+.crm-dashboard-grid-canvas.is-editing {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      hsl(var(--border) / 0.22) 0 1px,
+      transparent 1px var(--crm-dashboard-cell-step-y)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsl(var(--border) / 0.22) 0 1px,
+      transparent 1px var(--crm-dashboard-cell-step-x)
+    );
+  box-shadow:
+    inset 0 0 0 1px hsl(var(--border) / 0.18),
+    inset 0 1px 18px hsl(var(--border) / 0.06);
+}
+
+.dark .crm-dashboard-grid-canvas {
+  background-image: none;
+  box-shadow: none;
+}
+
+.dark .crm-dashboard-grid-canvas.is-editing {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      hsl(var(--border) / 0.24) 0 1px,
+      transparent 1px var(--crm-dashboard-cell-step-y)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsl(var(--border) / 0.24) 0 1px,
+      transparent 1px var(--crm-dashboard-cell-step-x)
+    );
+  box-shadow:
+    inset 0 0 0 1px hsl(var(--border) / 0.2),
+    inset 0 1px 20px hsl(var(--border) / 0.08);
+}
+
+.react-resizable-handle-e {
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.react-resizable-handle-s {
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.react-resizable-handle-e,
+.react-resizable-handle-s,
+.react-resizable-handle-se {
+  opacity: 0.8;
+}

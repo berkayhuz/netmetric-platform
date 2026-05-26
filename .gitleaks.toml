@@ -1,0 +1,47 @@
+title = "NetMetric Gitleaks Configuration"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Allow environment template files with placeholder values"
+paths = [
+  '''(^|/)\\.env\\.example$'''
+]
+
+[[allowlists]]
+description = "Allow documentation examples that intentionally mention token-like words"
+paths = [
+  '''^docs/.*\\.md$''',
+  '''^README\\.md$''',
+  '''^CONTRIBUTING\\.md$'''
+]
+regexes = [
+  '''(?i)(example|changeme|placeholder|dummy|sample|test)'''
+]
+
+[[allowlists]]
+description = "Exclude generated/cache artifacts from working-tree scans"
+paths = [
+  '''^apps/[^/]+/\.next/''',
+  '''^\.nuget/packages/''',
+  '''(^|/)node_modules/''',
+  '''^\.turbo/''',
+  '''^\.runlogs/''',
+  '''(^|/)bin/''',
+  '''(^|/)obj/'''
+]
+
+[[allowlists]]
+description = "Historical CRM test placeholders (generic-api-key false positives)"
+commits = [
+  '''ab9330a26f3ef7d179d2cc537aa45a33f3fe7f9b'''
+]
+paths = [
+  '''^services/crm/tests/IntegrationHub/NetMetric\.CRM\.IntegrationHub\.UnitTests/ProviderCredentialTests\.cs$''',
+  '''^services/crm/tests/IntegrationHub/NetMetric\.CRM\.IntegrationHub\.UnitTests/ProviderCatalogAndValidationTests\.cs$'''
+]
+regexes = [
+  '''(?i)access-token-456''',
+  '''(?i)EAAG-token-123456'''
+]

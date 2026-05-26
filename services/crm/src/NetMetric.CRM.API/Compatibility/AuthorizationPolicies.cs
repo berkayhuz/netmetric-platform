@@ -1,0 +1,222 @@
+// <copyright file="AuthorizationPolicies.cs" company="NetMetric">
+// Copyright (c) 2026 NetMetric. All rights reserved.
+// NetMetric is proprietary software. See the LICENSE file in the repository root.
+// </copyright>
+
+using Microsoft.AspNetCore.Authorization;
+using NetMetric.Authorization.AspNetCore;
+using NetMetric.CRM.PipelineManagement.Application.Security;
+
+namespace NetMetric.CRM.API.Compatibility;
+
+public static class AuthorizationPolicies
+{
+    public const string CompaniesRead = "crm.customer-management.companies.read";
+    public const string CompaniesManage = "crm.customer-management.companies.manage";
+    public const string ContactsRead = "crm.customer-management.contacts.read";
+    public const string ContactsManage = "crm.customer-management.contacts.manage";
+    public const string CustomersRead = "crm.customer-management.customers.read";
+    public const string CustomersManage = "crm.customer-management.customers.manage";
+    public const string AnalyticsRead = "analytics.read";
+    public const string ActivitiesRead = "activities.read";
+    public const string ActivitiesCreate = "activities.create";
+    public const string ArtificialIntelligenceRead = "artificial-intelligence.read";
+    public const string ArtificialIntelligenceManage = "artificial-intelligence.manage";
+    public const string CampaignsRead = "marketing.campaigns.read";
+    public const string CampaignsManage = "marketing.campaigns.manage";
+    public const string CalendarSyncRead = "calendar-sync.read";
+    public const string CalendarSyncManage = "calendar-sync.manage";
+    public const string CatalogProductsRead = "catalog.products.read";
+    public const string CatalogProductsManage = "catalog.products.manage";
+    public const string ContractsRead = "contracts.read";
+    public const string ContractsManage = "contracts.manage";
+    public const string CustomerDuplicatesRead = "customer-intelligence.duplicates.read";
+    public const string CustomerDuplicatesManage = "customer-intelligence.duplicates.manage";
+    public const string CustomerHealthRead = "customer-intelligence.health.read";
+    public const string CustomerSearchRead = "customer-intelligence.search.read";
+    public const string CustomerTimelineRead = "customer-intelligence.timeline.read";
+    public const string DealsRead = "deals.read";
+    public const string DealsManage = "deals.manage";
+    public const string DocumentApprovalsManage = "documents.approvals.manage";
+    public const string DocumentVersionsManage = "documents.versions.manage";
+    public const string DocumentsRead = "documents.read";
+    public const string DocumentsManage = "documents.manage";
+    public const string FinanceOperationsRead = "finance.operations.read";
+    public const string FinanceOperationsManage = "finance.operations.manage";
+    public const string IntegrationsRead = "integrations.read";
+    public const string IntegrationsManage = "integrations.manage";
+    public const string CrmSettingsRead = "crm.settings.read";
+    public const string CrmSettingsManage = "crm.settings.manage";
+    public const string CrmIntegrationsRead = "crm.integrations.read";
+    public const string CrmIntegrationsManage = "crm.integrations.manage";
+    public const string CrmApiKeysRead = "crm.apiKeys.read";
+    public const string CrmApiKeysManage = "crm.apiKeys.manage";
+    public const string CrmWebhooksRead = "crm.webhooks.read";
+    public const string CrmWebhooksManage = "crm.webhooks.manage";
+    public const string CrmInboxRead = "crm.inbox.read";
+    public const string CrmInboxReply = "crm.inbox.reply";
+    public const string CrmInboxConvert = "crm.inbox.convert";
+    public const string CrmInboxAssign = "crm.inbox.assign";
+    public const string CrmInboxManage = "crm.inbox.manage";
+    public const string KnowledgeBaseArticlesRead = "knowledge-base.articles.read";
+    public const string KnowledgeBaseArticlesManage = "knowledge-base.articles.manage";
+    public const string KnowledgeBaseCategoriesRead = "knowledge-base.categories.read";
+    public const string KnowledgeBaseCategoriesManage = "knowledge-base.categories.manage";
+    public const string LeadsRead = "leads.read";
+    public const string LeadsManage = "leads.manage";
+    public const string LeadScoresRead = "lead-scores.read";
+    public const string OpportunityQuotesRead = "opportunity.quotes.read";
+    public const string OpportunityQuotesManage = "opportunity.quotes.manage";
+    public const string OpportunitiesRead = "opportunities.read";
+    public const string OpportunitiesManage = "opportunities.manage";
+    public const string OrdersRead = "orders.read";
+    public const string OrdersManage = "orders.manage";
+    public const string OmnichannelRead = "omnichannel.read";
+    public const string OmnichannelManage = "omnichannel.manage";
+    public const string ProposalsRead = "proposals.read";
+    public const string ProposalsManage = "proposals.manage";
+    public const string QuotesRead = "quotes.read";
+    public const string QuotesManage = "quotes.manage";
+    public const string SalesForecastsRead = "sales-forecasts.read";
+    public const string SalesForecastsManage = "sales-forecasts.manage";
+    public const string SupportInboxConnectionsRead = "support-inbox.connections.read";
+    public const string SupportInboxConnectionsManage = "support-inbox.connections.manage";
+    public const string SupportInboxRulesRead = "support-inbox.rules.read";
+    public const string SupportInboxMessagesRead = "support-inbox.messages.read";
+    public const string TagsRead = "tags.read";
+    public const string TagsManage = "tags.manage";
+    public const string SmartLabelsManage = "tags.smart-labels.manage";
+    public const string ClassificationsManage = "tags.classifications.manage";
+    public const string TenantsRead = "tenants.read";
+    public const string TenantsManage = "tenants.manage";
+    public const string TicketAssignmentsRead = "ticket.assignments.read";
+    public const string TicketCategoriesRead = "ticket.categories.read";
+    public const string TicketQueuesRead = "ticket.queues.read";
+    public const string TicketQueuesManage = "ticket.queues.manage";
+    public const string TicketSlaPoliciesRead = "ticket.sla-policies.read";
+    public const string TicketSlaPoliciesManage = "ticket.sla-policies.manage";
+    public const string TicketStatusHistoryRead = "ticket.status-history.read";
+    public const string TicketsRead = "tickets.read";
+    public const string TicketsManage = "tickets.manage";
+    public const string WinLossRead = "win-loss.read";
+    public const string WinLossManage = "win-loss.manage";
+    public const string WorkflowApprovalsManage = "workflow.approvals.manage";
+    public const string WorkflowAssignmentRulesManage = "workflow.assignment-rules.manage";
+    public const string WorkflowRulesManage = "workflow.rules.manage";
+    public const string WorkflowWebhooksManage = "workflow.webhooks.manage";
+    public const string WorkManagementRead = "work-management.read";
+    public const string WorkManagementManage = "work-management.manage";
+
+    public static void AddCustomerManagementPolicies(this AuthorizationOptions options)
+    {
+        foreach (var policyName in GetPolicyNames())
+        {
+            options.AddPolicy(policyName, policy => policy.Requirements.Add(new PermissionRequirement(policyName)));
+        }
+    }
+
+    private static IEnumerable<string> GetPolicyNames()
+    {
+        yield return CompaniesRead;
+        yield return CompaniesManage;
+        yield return ContactsRead;
+        yield return ContactsManage;
+        yield return CustomersRead;
+        yield return CustomersManage;
+        yield return AnalyticsRead;
+        yield return ActivitiesRead;
+        yield return ActivitiesCreate;
+        yield return ArtificialIntelligenceRead;
+        yield return ArtificialIntelligenceManage;
+        yield return CampaignsRead;
+        yield return CampaignsManage;
+        yield return CalendarSyncRead;
+        yield return CalendarSyncManage;
+        yield return CatalogProductsRead;
+        yield return CatalogProductsManage;
+        yield return ContractsRead;
+        yield return ContractsManage;
+        yield return CustomerDuplicatesRead;
+        yield return CustomerDuplicatesManage;
+        yield return CustomerHealthRead;
+        yield return CustomerSearchRead;
+        yield return CustomerTimelineRead;
+        yield return DealsRead;
+        yield return DealsManage;
+        yield return DocumentApprovalsManage;
+        yield return DocumentVersionsManage;
+        yield return DocumentsRead;
+        yield return DocumentsManage;
+        yield return FinanceOperationsRead;
+        yield return FinanceOperationsManage;
+        yield return IntegrationsRead;
+        yield return IntegrationsManage;
+        yield return CrmSettingsRead;
+        yield return CrmSettingsManage;
+        yield return CrmIntegrationsRead;
+        yield return CrmIntegrationsManage;
+        yield return CrmApiKeysRead;
+        yield return CrmApiKeysManage;
+        yield return CrmWebhooksRead;
+        yield return CrmWebhooksManage;
+        yield return CrmInboxRead;
+        yield return CrmInboxReply;
+        yield return CrmInboxConvert;
+        yield return CrmInboxAssign;
+        yield return CrmInboxManage;
+        yield return KnowledgeBaseArticlesRead;
+        yield return KnowledgeBaseArticlesManage;
+        yield return KnowledgeBaseCategoriesRead;
+        yield return KnowledgeBaseCategoriesManage;
+        yield return LeadsRead;
+        yield return LeadsManage;
+        yield return LeadScoresRead;
+        yield return OpportunityQuotesRead;
+        yield return OpportunityQuotesManage;
+        yield return OpportunitiesRead;
+        yield return OpportunitiesManage;
+        yield return OrdersRead;
+        yield return OrdersManage;
+        yield return OmnichannelRead;
+        yield return OmnichannelManage;
+        yield return ProposalsRead;
+        yield return ProposalsManage;
+        yield return QuotesRead;
+        yield return QuotesManage;
+        yield return SalesForecastsRead;
+        yield return SalesForecastsManage;
+        yield return SupportInboxConnectionsRead;
+        yield return SupportInboxConnectionsManage;
+        yield return SupportInboxRulesRead;
+        yield return SupportInboxMessagesRead;
+        yield return TagsRead;
+        yield return TagsManage;
+        yield return SmartLabelsManage;
+        yield return ClassificationsManage;
+        yield return TenantsRead;
+        yield return TenantsManage;
+        yield return TicketAssignmentsRead;
+        yield return TicketCategoriesRead;
+        yield return TicketQueuesRead;
+        yield return TicketQueuesManage;
+        yield return TicketSlaPoliciesRead;
+        yield return TicketSlaPoliciesManage;
+        yield return TicketStatusHistoryRead;
+        yield return TicketsRead;
+        yield return TicketsManage;
+        yield return WinLossRead;
+        yield return WinLossManage;
+        yield return WorkflowApprovalsManage;
+        yield return WorkflowAssignmentRulesManage;
+        yield return WorkflowRulesManage;
+        yield return WorkflowWebhooksManage;
+        yield return WorkManagementRead;
+        yield return WorkManagementManage;
+        yield return PipelineManagementAuthorizationPolicies.LostReasonsManage;
+        yield return PipelineManagementAuthorizationPolicies.LostReasonsRead;
+        yield return PipelineManagementAuthorizationPolicies.OpportunityPipelineManage;
+        yield return PipelineManagementAuthorizationPolicies.OpportunityStageHistoryRead;
+        yield return PipelineManagementAuthorizationPolicies.LeadConversionsManage;
+        yield return PipelineManagementAuthorizationPolicies.LeadConversionsRead;
+    }
+}

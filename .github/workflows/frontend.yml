@@ -1,0 +1,372 @@
+name: Frontend Foundation
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: frontend-foundation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CI: true
+
+jobs:
+  changes:
+    name: Detect Changes
+    runs-on: ubuntu-latest
+    outputs:
+      docs_only: ${{ steps.matrix.outputs.docs_only }}
+      run_frontend: ${{ steps.matrix.outputs.run_frontend }}
+      run_dotnet: ${{ steps.matrix.outputs.run_dotnet }}
+      run_native: ${{ steps.matrix.outputs.run_native }}
+      run_deploy: ${{ steps.matrix.outputs.run_deploy }}
+      app_matrix: ${{ steps.matrix.outputs.app_matrix }}
+      packages_lint_matrix: ${{ steps.matrix.outputs.packages_lint_matrix }}
+      packages_typecheck_matrix: ${{ steps.matrix.outputs.packages_typecheck_matrix }}
+      packages_build_matrix: ${{ steps.matrix.outputs.packages_build_matrix }}
+      packages_test_matrix: ${{ steps.matrix.outputs.packages_test_matrix }}
+      packages_coverage_matrix: ${{ steps.matrix.outputs.packages_coverage_matrix }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compute path filters
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            docs:
+              - "docs/**"
+              - "README.md"
+              - "CONTRIBUTING.md"
+              - "CHANGELOG.md"
+            ci:
+              - ".github/**"
+              - "scripts/**"
+            repo:
+              - "package.json"
+              - "pnpm-lock.yaml"
+              - "pnpm-workspace.yaml"
+              - "turbo.json"
+              - ".nvmrc"
+              - "sonar-project.properties"
+            pkg_ui:
+              - "packages/frontend/ui/**"
+            pkg_config:
+              - "packages/frontend/config/**"
+            pkg_types:
+              - "packages/frontend/types/**"
+            pkg_lint:
+              - "packages/frontend/eslint-config/**"
+            pkg_tsconfig:
+              - "packages/frontend/tsconfig/**"
+            pkg_tailwind:
+              - "packages/frontend/tailwind-config/**"
+            app_account:
+              - "apps/account-web/**"
+            app_admin:
+              - "apps/admin-web/**"
+            app_auth:
+              - "apps/auth-web/**"
+            app_crm:
+              - "apps/crm-web/**"
+            app_mobile:
+              - "apps/mobile-app/**"
+            app_public:
+              - "apps/public-web/**"
+            app_tools:
+              - "apps/tools-web/**"
+            dotnet:
+              - "services/**"
+              - "platform/**"
+              - "packages/dotnet/**"
+              - "Directory.Build.props"
+              - "Directory.Build.targets"
+              - "Directory.Packages.props"
+              - "global.json"
+              - "**/*.sln"
+              - "**/*.slnx"
+              - "**/*.csproj"
+            native:
+              - "native/**"
+              - "**/*.cpp"
+              - "**/*.cxx"
+              - "**/*.cc"
+              - "**/*.h"
+              - "**/*.hpp"
+              - "**/CMakeLists.txt"
+            deploy:
+              - "deploy/**"
+            tests:
+              - "tests/**"
+            tools:
+              - "tools/**"
+
+      - name: Build matrix
+        id: matrix
+        env:
+          FILTER_DOCS: ${{ steps.filter.outputs.docs }}
+          FILTER_CI: ${{ steps.filter.outputs.ci }}
+          FILTER_REPO: ${{ steps.filter.outputs.repo }}
+          FILTER_PKG_UI: ${{ steps.filter.outputs.pkg_ui }}
+          FILTER_PKG_CONFIG: ${{ steps.filter.outputs.pkg_config }}
+          FILTER_PKG_TYPES: ${{ steps.filter.outputs.pkg_types }}
+          FILTER_PKG_LINT: ${{ steps.filter.outputs.pkg_lint }}
+          FILTER_PKG_TSCONFIG: ${{ steps.filter.outputs.pkg_tsconfig }}
+          FILTER_PKG_TAILWIND: ${{ steps.filter.outputs.pkg_tailwind }}
+          FILTER_APP_ACCOUNT: ${{ steps.filter.outputs.app_account }}
+          FILTER_APP_ADMIN: ${{ steps.filter.outputs.app_admin }}
+          FILTER_APP_AUTH: ${{ steps.filter.outputs.app_auth }}
+          FILTER_APP_CRM: ${{ steps.filter.outputs.app_crm }}
+          FILTER_APP_MOBILE: ${{ steps.filter.outputs.app_mobile }}
+          FILTER_APP_PUBLIC: ${{ steps.filter.outputs.app_public }}
+          FILTER_APP_TOOLS: ${{ steps.filter.outputs.app_tools }}
+          FILTER_DOTNET: ${{ steps.filter.outputs.dotnet }}
+          FILTER_NATIVE: ${{ steps.filter.outputs.native }}
+          FILTER_DEPLOY: ${{ steps.filter.outputs.deploy }}
+          FILTER_TESTS: ${{ steps.filter.outputs.tests }}
+          FILTER_TOOLS: ${{ steps.filter.outputs.tools }}
+        run: node ./scripts/ci/generate-matrix.mjs
+
+  workspace-validate:
+    name: Workspace Validation
+    needs: changes
+    if: ${{ needs.changes.outputs.run_frontend == 'true' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate workspace
+        run: pnpm run repo:validate
+
+  app-scaffold-validation:
+    name: App Scaffold (${{ matrix.app.name }})
+    needs: [changes, workspace-validate]
+    if: ${{ needs.changes.outputs.run_frontend == 'true' && needs.changes.outputs.app_matrix != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        app: ${{ fromJson(needs.changes.outputs.app_matrix) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate app scaffold
+        run: node ./scripts/ci/validate-app-scaffold.mjs "${{ matrix.app.path }}"
+
+  packages-lint:
+    name: Lint (${{ matrix.pkg.name }})
+    needs: [changes, workspace-validate]
+    if: ${{ needs.changes.outputs.run_frontend == 'true' && needs.changes.outputs.packages_lint_matrix != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        pkg: ${{ fromJson(needs.changes.outputs.packages_lint_matrix) }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec turbo run lint --filter=${{ matrix.pkg.name }} --output-logs=errors-only
+
+  packages-typecheck:
+    name: Typecheck (${{ matrix.pkg.name }})
+    needs: [changes, workspace-validate]
+    if: ${{ needs.changes.outputs.run_frontend == 'true' && needs.changes.outputs.packages_typecheck_matrix != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        pkg: ${{ fromJson(needs.changes.outputs.packages_typecheck_matrix) }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec turbo run typecheck --filter=${{ matrix.pkg.name }} --output-logs=errors-only
+
+  packages-build:
+    name: Build (${{ matrix.pkg.name }})
+    needs: [changes, workspace-validate]
+    if: ${{ needs.changes.outputs.run_frontend == 'true' && needs.changes.outputs.packages_build_matrix != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        pkg: ${{ fromJson(needs.changes.outputs.packages_build_matrix) }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec turbo run build --filter=${{ matrix.pkg.name }} --output-logs=errors-only
+
+  packages-test:
+    name: Test (${{ matrix.pkg.name }})
+    needs: [changes, workspace-validate]
+    if: ${{ needs.changes.outputs.run_frontend == 'true' && needs.changes.outputs.packages_test_matrix != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        pkg: ${{ fromJson(needs.changes.outputs.packages_test_matrix) }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec turbo run test --filter=${{ matrix.pkg.name }} --output-logs=errors-only
+
+  packages-coverage:
+    name: Coverage (${{ matrix.pkg.name }})
+    needs: [changes, workspace-validate]
+    if: ${{ needs.changes.outputs.run_frontend == 'true' && needs.changes.outputs.packages_coverage_matrix != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        pkg: ${{ fromJson(needs.changes.outputs.packages_coverage_matrix) }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec turbo run coverage --filter=${{ matrix.pkg.name }} --output-logs=errors-only
+
+  dotnet-gate:
+    name: Dotnet Gate
+    needs: changes
+    if: ${{ needs.changes.outputs.run_dotnet == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Enable corepack
+        run: corepack enable
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Dotnet restore
+        run: pnpm run dotnet:restore
+      - name: Dotnet build
+        run: pnpm run dotnet:build
+      - name: Dotnet test
+        run: pnpm run dotnet:test
+
+  native-gate:
+    name: Native Gate
+    needs: changes
+    if: ${{ needs.changes.outputs.run_native == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Enable corepack
+        run: corepack enable
+      - name: Native checks
+        run: pnpm run native:check
+
+  deploy-gate:
+    name: Deploy Gate
+    needs: changes
+    if: ${{ needs.changes.outputs.run_deploy == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Enable corepack
+        run: corepack enable
+      - name: Install kubectl
+        uses: azure/setup-kubectl@v4
+      - name: Install helm
+        uses: azure/setup-helm@v4.3.0
+      - name: Install terraform
+        uses: hashicorp/setup-terraform@v3
+      - name: Deploy checks
+        run: pnpm run deploy:check

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/knip@latest/schema.json",
+  "workspaces": {
+    "apps/auth-web": {
+      "entry": ["src/app/**/*.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"],
+      "paths": {
+        "@/*": ["src/*"]
+      }
+    },
+    "packages/frontend/ui": {
+      "project": ["src/**/*.{ts,tsx}"],
+      "ignore": ["src/test/raw-css.d.ts"]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tools-web
+  namespace: netmetric
+  labels:
+    app.kubernetes.io/name: tools-web
+    app.kubernetes.io/part-of: netmetric
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: tools-web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: tools-web
+        app.kubernetes.io/part-of: netmetric
+    spec:
+      serviceAccountName: tools-web
+      volumes:
+        - name: tmp
+          emptyDir: {}
+      containers:
+        - name: tools-web
+          image: ghcr.io/netmetric/tools-web:${IMAGE_TAG}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 7005
+          envFrom:
+            - configMapRef:
+                name: tools-web-env
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: http
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

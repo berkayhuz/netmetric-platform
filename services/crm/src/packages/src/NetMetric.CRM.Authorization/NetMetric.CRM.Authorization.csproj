@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Authorization\NetMetric.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.CurrentUser\NetMetric.CurrentUser.csproj" />
+  </ItemGroup>
+
+</Project>

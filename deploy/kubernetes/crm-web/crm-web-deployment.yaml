@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crm-web
+  namespace: netmetric
+  labels:
+    app.kubernetes.io/name: crm-web
+    app.kubernetes.io/part-of: netmetric
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: crm-web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: crm-web
+        app.kubernetes.io/part-of: netmetric
+    spec:
+      serviceAccountName: crm-web
+      volumes:
+        - name: tmp
+          emptyDir: {}
+      containers:
+        - name: crm-web
+          image: ghcr.io/netmetric/crm-web:${IMAGE_TAG}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 7006
+          envFrom:
+            - configMapRef:
+                name: crm-web-env
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: http
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

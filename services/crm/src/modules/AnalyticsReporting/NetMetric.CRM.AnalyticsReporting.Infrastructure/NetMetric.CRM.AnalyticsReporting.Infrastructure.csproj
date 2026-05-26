@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Entities\NetMetric.Entities.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore\NetMetric.Persistence.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Tenancy\NetMetric.Tenancy.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.AnalyticsReporting.Application\NetMetric.CRM.AnalyticsReporting.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.AnalyticsReporting.Domain\NetMetric.CRM.AnalyticsReporting.Domain.csproj" />
+  </ItemGroup>
+  
+</Project>

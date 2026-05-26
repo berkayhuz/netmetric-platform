@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./tokens.css";
+@import "./theme.css";
+
+@source "../**/*.{ts,tsx}";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  :root {
+    --netmetric-app-background-image: none;
+    --netmetric-app-background-image-light: none;
+    --netmetric-app-background-image-dark: none;
+  }
+
+  [data-netmetric-app-background] {
+    --netmetric-app-background-image: var(--netmetric-app-background-image-light);
+  }
+
+  .dark [data-netmetric-app-background] {
+    --netmetric-app-background-image: var(--netmetric-app-background-image-dark);
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    @apply font-sans;
+  }
+}

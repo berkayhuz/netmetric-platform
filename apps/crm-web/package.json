@@ -1,0 +1,48 @@
+{
+  "name": "crm-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 7006",
+    "build": "next build",
+    "start": "next start -p 7006",
+    "lint": "eslint",
+    "test": "vitest run",
+    "typecheck": "next typegen && tsc --noEmit",
+    "coverage": "vitest run --coverage --coverage.provider=v8 --coverage.reporter=text-summary --coverage.reporter=json-summary --coverage.reporter=lcov",
+    "test:ci": "pnpm run typecheck && pnpm run lint && pnpm run test",
+    "smoke:e2e": "node ../../scripts/e2e/run-smoke.mjs crm-web"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@netmetric/auth": "workspace:*",
+    "@netmetric/i18n": "workspace:*",
+    "@netmetric/observability": "workspace:*",
+    "@netmetric/ui": "workspace:*",
+    "lucide-react": "^1.14.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-grid-layout": "^2.2.3",
+    "react-hook-form": "^7.75.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@netmetric/eslint-config": "workspace:*",
+    "@netmetric/tailwind-config": "workspace:*",
+    "@netmetric/tsconfig": "workspace:*",
+    "@netmetric/ui": "workspace:*",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.1.0",
+    "@vitest/coverage-v8": "^4.0.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.0.3"
+  }
+}

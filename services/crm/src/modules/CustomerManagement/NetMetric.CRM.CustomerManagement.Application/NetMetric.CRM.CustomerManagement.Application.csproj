@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="MediatR" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Authorization\NetMetric.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.CurrentUser\NetMetric.CurrentUser.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Exceptions\NetMetric.Exceptions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Idempotency\NetMetric.Idempotency.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Media\NetMetric.Media.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Pagination\NetMetric.Pagination.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Repository\NetMetric.Repository.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Activities\NetMetric.CRM.Activities.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Auditing\NetMetric.CRM.Auditing.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Authorization\NetMetric.CRM.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Core\NetMetric.CRM.Core.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.CustomFields\NetMetric.CRM.CustomFields.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Documents\NetMetric.CRM.Documents.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.SharedKernel\NetMetric.CRM.SharedKernel.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Tagging\NetMetric.CRM.Tagging.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Types\NetMetric.CRM.Types.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.CustomerManagement.Contracts\NetMetric.CRM.CustomerManagement.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.CustomerManagement.Domain\NetMetric.CRM.CustomerManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

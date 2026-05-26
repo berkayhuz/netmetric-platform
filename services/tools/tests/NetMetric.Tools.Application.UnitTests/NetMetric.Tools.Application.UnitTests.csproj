@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NetMetric.Tools.Application\NetMetric.Tools.Application.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Tools.Domain\NetMetric.Tools.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Moq" />
+  </ItemGroup>
+</Project>

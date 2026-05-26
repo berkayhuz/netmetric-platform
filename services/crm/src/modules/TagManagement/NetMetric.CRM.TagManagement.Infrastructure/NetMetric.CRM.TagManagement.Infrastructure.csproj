@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Authorization.AspNetCore\NetMetric.Authorization.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Auditing\NetMetric.Persistence.EntityFrameworkCore.Auditing.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.SoftDelete\NetMetric.Persistence.EntityFrameworkCore.SoftDelete.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Tenancy\NetMetric.Persistence.EntityFrameworkCore.Tenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore\NetMetric.Persistence.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.TagManagement.Application\NetMetric.CRM.TagManagement.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.TagManagement.Domain\NetMetric.CRM.TagManagement.Domain.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.TagManagement.Contracts\NetMetric.CRM.TagManagement.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

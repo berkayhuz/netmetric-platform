@@ -1,0 +1,25 @@
+# syntax=docker/dockerfile:1
+
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /src
+
+COPY . .
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="${PATH}:/root/.dotnet/tools"
+
+RUN dotnet restore src/Services/Account/NetMetric.Account.Api/NetMetric.Account.Api.csproj --locked-mode
+RUN dotnet ef migrations bundle \
+    --project src/Services/Account/NetMetric.Account.Persistence/NetMetric.Account.Persistence.csproj \
+    --startup-project src/Services/Account/NetMetric.Account.Api/NetMetric.Account.Api.csproj \
+    --context AccountDbContext \
+    --configuration Release \
+    --runtime linux-x64 \
+    --self-contained true \
+    --output /out/account-migrate
+
+FROM mcr.microsoft.com/dotnet/runtime-deps:10.0 AS runtime
+WORKDIR /migrations
+COPY --from=build /out/account-migrate ./account-migrate
+RUN chmod +x ./account-migrate
+USER $APP_UID
+ENTRYPOINT ["./account-migrate"]

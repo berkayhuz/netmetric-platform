@@ -1,0 +1,9 @@
+packages:
+  - "apps/*"
+  - "packages/frontend/*"
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+overrides:
+  typescript: 5.9.3

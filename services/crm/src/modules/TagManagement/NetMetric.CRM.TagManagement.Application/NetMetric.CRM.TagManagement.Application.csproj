@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Repository\NetMetric.Repository.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.TagManagement.Domain\NetMetric.CRM.TagManagement.Domain.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.TagManagement.Contracts\NetMetric.CRM.TagManagement.Contracts.csproj" />
+  </ItemGroup>
+  
+</Project>

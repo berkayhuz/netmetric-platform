@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.AspNetCore.TrustedGateway\NetMetric.AspNetCore.TrustedGateway.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Media.Storage\NetMetric.Media.Storage.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Messaging.RabbitMq\NetMetric.Messaging.RabbitMq.csproj" />
+    <ProjectReference Include="..\..\..\auth\src\NetMetric.Auth.Contracts\NetMetric.Auth.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\notification\src\NetMetric.Notification.Contracts\NetMetric.Notification.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.Account.Application\NetMetric.Account.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.Account.Domain\NetMetric.Account.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

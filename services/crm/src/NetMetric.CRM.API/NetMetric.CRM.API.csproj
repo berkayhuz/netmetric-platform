@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" VersionOverride="10.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+    <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.EntityFrameworkCore" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.AspNetCore\NetMetric.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Authorization.AspNetCore\NetMetric.Authorization.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Idempotency.DistributedCache\NetMetric.Idempotency.DistributedCache.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Idempotency.Redis\NetMetric.Idempotency.Redis.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Media.Storage\NetMetric.Media.Storage.csproj" />
+    <ProjectReference Include="..\modules\AnalyticsReporting\NetMetric.CRM.AnalyticsReporting.Infrastructure\NetMetric.CRM.AnalyticsReporting.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\ArtificialIntelligence\NetMetric.CRM.ArtificialIntelligence.Infrastructure\NetMetric.CRM.ArtificialIntelligence.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\CalendarSync\NetMetric.CRM.CalendarSync.Infrastructure\NetMetric.CRM.CalendarSync.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\ContractLifecycle\NetMetric.CRM.ContractLifecycle.Infrastructure\NetMetric.CRM.ContractLifecycle.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\CustomerIntelligence\NetMetric.CRM.CustomerIntelligence.Infrastructure\NetMetric.CRM.CustomerIntelligence.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\CustomerManagement\NetMetric.CRM.CustomerManagement.Infrastructure\NetMetric.CRM.CustomerManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\DealManagement\NetMetric.CRM.DealManagement.Infrastructure\NetMetric.CRM.DealManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\DocumentManagement\NetMetric.CRM.DocumentManagement.Infrastructure\NetMetric.CRM.DocumentManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\FinanceOperations\NetMetric.CRM.FinanceOperations.Infrastructure\NetMetric.CRM.FinanceOperations.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\IntegrationHub\NetMetric.CRM.IntegrationHub.Infrastructure\NetMetric.CRM.IntegrationHub.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\KnowledgeBaseManagement\NetMetric.CRM.KnowledgeBaseManagement.Infrastructure\NetMetric.CRM.KnowledgeBaseManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\LeadManagement\NetMetric.CRM.LeadManagement.Infrastructure\NetMetric.CRM.LeadManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\MarketingAutomation\NetMetric.CRM.MarketingAutomation.Infrastructure\NetMetric.CRM.MarketingAutomation.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\Omnichannel\NetMetric.CRM.Omnichannel.Infrastructure\NetMetric.CRM.Omnichannel.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\OpportunityManagement\NetMetric.CRM.OpportunityManagement.Infrastructure\NetMetric.CRM.OpportunityManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\PipelineManagement\NetMetric.CRM.PipelineManagement.Infrastructure\NetMetric.CRM.PipelineManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\ProductCatalog\NetMetric.CRM.ProductCatalog.Infrastructure\NetMetric.CRM.ProductCatalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\QuoteManagement\NetMetric.CRM.QuoteManagement.Infrastructure\NetMetric.CRM.QuoteManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\SalesForecasting\NetMetric.CRM.SalesForecasting.Infrastructure\NetMetric.CRM.SalesForecasting.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\SupportInboxIntegration\NetMetric.CRM.SupportInboxIntegration.Infrastructure\NetMetric.CRM.SupportInboxIntegration.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\TagManagement\NetMetric.CRM.TagManagement.Infrastructure\NetMetric.CRM.TagManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\TenantManagement\NetMetric.CRM.TenantManagement.Infrastructure\NetMetric.CRM.TenantManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\TicketManagement\NetMetric.CRM.TicketManagement.Infrastructure\NetMetric.CRM.TicketManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\TicketSlaManagement\NetMetric.CRM.TicketSlaManagement.Infrastructure\NetMetric.CRM.TicketSlaManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\TicketWorkflowManagement\NetMetric.CRM.TicketWorkflowManagement.Infrastructure\NetMetric.CRM.TicketWorkflowManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\WorkflowAutomation\NetMetric.CRM.WorkflowAutomation.Infrastructure\NetMetric.CRM.WorkflowAutomation.Infrastructure.csproj" />
+    <ProjectReference Include="..\modules\WorkManagement\NetMetric.CRM.WorkManagement.Infrastructure\NetMetric.CRM.WorkManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

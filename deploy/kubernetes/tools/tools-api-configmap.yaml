@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tools-api-env
+  namespace: netmetric
+  labels:
+    app.kubernetes.io/name: tools-api
+    app.kubernetes.io/part-of: netmetric
+data:
+  ASPNETCORE_ENVIRONMENT: "Production"
+  Tools__Authorization__RequireAuthenticatedUserForHistory: "true"
+  Tools__ArtifactStorage__RootPath: "/var/lib/netmetric/tools-artifacts"

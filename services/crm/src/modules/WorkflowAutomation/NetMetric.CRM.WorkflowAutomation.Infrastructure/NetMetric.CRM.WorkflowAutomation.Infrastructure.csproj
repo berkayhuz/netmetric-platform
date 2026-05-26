@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Auditing\NetMetric.Persistence.EntityFrameworkCore.Auditing.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.SoftDelete\NetMetric.Persistence.EntityFrameworkCore.SoftDelete.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Tenancy\NetMetric.Persistence.EntityFrameworkCore.Tenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore\NetMetric.Persistence.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.WorkflowAutomation.Application\NetMetric.CRM.WorkflowAutomation.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.WorkflowAutomation.Domain\NetMetric.CRM.WorkflowAutomation.Domain.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.WorkflowAutomation.Contracts\NetMetric.CRM.WorkflowAutomation.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\modules\CustomerIntelligence\NetMetric.CRM.CustomerIntelligence.Application\NetMetric.CRM.CustomerIntelligence.Application.csproj" />
+    <ProjectReference Include="..\..\..\src\modules\CustomerIntelligence\NetMetric.CRM.CustomerIntelligence.Contracts\NetMetric.CRM.CustomerIntelligence.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\src\modules\CustomerIntelligence\NetMetric.CRM.CustomerIntelligence.Domain\NetMetric.CRM.CustomerIntelligence.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  
+</Project>

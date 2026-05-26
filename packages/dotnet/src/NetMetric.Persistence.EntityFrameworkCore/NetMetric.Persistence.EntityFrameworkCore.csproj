@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Entities.Abstractions\NetMetric.Entities.Abstractions.csproj" />
+    <ProjectReference Include="..\NetMetric.Repository\NetMetric.Repository.csproj" />
+    <ProjectReference Include="..\NetMetric.Tenancy\NetMetric.Tenancy.csproj" />
+  </ItemGroup>
+
+</Project>

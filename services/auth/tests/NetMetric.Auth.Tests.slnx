@@ -1,0 +1,19 @@
+<Solution>
+  <Project Path="../../../packages/dotnet/src/NetMetric.AspNetCore.TrustedGateway/NetMetric.AspNetCore.TrustedGateway.csproj" />
+  <Project Path="../../../packages/dotnet/src/NetMetric.AspNetCore/NetMetric.AspNetCore.csproj" />
+  <Project Path="../../../packages/dotnet/src/NetMetric.Localization/NetMetric.Localization.csproj" />
+  <Project Path="../../../packages/dotnet/src/NetMetric.Messaging.Abstractions/NetMetric.Messaging.Abstractions.csproj" />
+  <Project Path="../../../packages/dotnet/src/NetMetric.Messaging.RabbitMq/NetMetric.Messaging.RabbitMq.csproj" />
+  <Project Path="../src/NetMetric.Auth.API/NetMetric.Auth.API.csproj" />
+  <Project Path="../src/NetMetric.Auth.Application/NetMetric.Auth.Application.csproj" />
+  <Project Path="../src/NetMetric.Auth.Contracts/NetMetric.Auth.Contracts.csproj" />
+  <Project Path="../src/NetMetric.Auth.Domain/NetMetric.Auth.Domain.csproj" />
+  <Project Path="../src/NetMetric.Auth.Infrastructure/NetMetric.Auth.Infrastructure.csproj" />
+  <Project Path="NetMetric.Auth.Api.FunctionalTests/NetMetric.Auth.Api.FunctionalTests.csproj" />
+  <Project Path="NetMetric.Auth.Application.UnitTests/NetMetric.Auth.Application.UnitTests.csproj" />
+  <Project Path="NetMetric.Auth.ArchitectureTests/NetMetric.Auth.ArchitectureTests.csproj" />
+  <Project Path="NetMetric.Auth.Contracts.Tests/NetMetric.Auth.Contracts.Tests.csproj" />
+  <Project Path="NetMetric.Auth.Domain.UnitTests/NetMetric.Auth.Domain.UnitTests.csproj" />
+  <Project Path="NetMetric.Auth.Infrastructure.IntegrationTests/NetMetric.Auth.Infrastructure.IntegrationTests.csproj" />
+  <Project Path="NetMetric.Auth.TestKit/NetMetric.Auth.TestKit.csproj" />
+</Solution>

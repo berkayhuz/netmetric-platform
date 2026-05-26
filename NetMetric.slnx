@@ -1,0 +1,421 @@
+<Solution>
+  <Folder Name="/packages/" />
+  <Folder Name="/packages/dotnet/" />
+  <Folder Name="/packages/dotnet/src/">
+    <Project Path="packages/dotnet/src/NetMetric.AspNetCore.CurrentUser/NetMetric.AspNetCore.CurrentUser.csproj" Id="2439b269-f5e4-4850-8612-2e32f9679ea4" />
+    <Project Path="packages/dotnet/src/NetMetric.AspNetCore.TrustedGateway/NetMetric.AspNetCore.TrustedGateway.csproj" />
+    <Project Path="packages/dotnet/src/NetMetric.AspNetCore/NetMetric.AspNetCore.csproj" />
+    <Project Path="packages/dotnet/src/NetMetric.Authorization.AspNetCore/NetMetric.Authorization.AspNetCore.csproj" Id="4c51f2d4-c5ab-4fef-88c1-02eb276997ca" />
+    <Project Path="packages/dotnet/src/NetMetric.Authorization.Claims/NetMetric.Authorization.Claims.csproj" Id="e00a4815-8481-4a3d-b64d-24a123f0dc1a" />
+    <Project Path="packages/dotnet/src/NetMetric.Authorization/NetMetric.Authorization.csproj" Id="1bebea76-9c09-4b01-b003-937d02a380a3" />
+    <Project Path="packages/dotnet/src/NetMetric.Clock/NetMetric.Clock.csproj" Id="980e7929-25a0-4e39-bea3-91544c1586e2" />
+    <Project Path="packages/dotnet/src/NetMetric.CurrentUser/NetMetric.CurrentUser.csproj" Id="18934978-4d42-4102-9522-16a1c1acf28f" />
+    <Project Path="packages/dotnet/src/NetMetric.Entities.Abstractions/NetMetric.Entities.Abstractions.csproj" Id="733185c1-09fb-4e57-af15-cbc336a061ad" />
+    <Project Path="packages/dotnet/src/NetMetric.Entities/NetMetric.Entities.csproj" Id="094529a5-4d34-4028-bbb4-5bdb4f9afe04" />
+    <Project Path="packages/dotnet/src/NetMetric.Exceptions/NetMetric.Exceptions.csproj" Id="b1d9c95e-55ea-4b28-8e17-8d9a3c659c7e" />
+    <Project Path="packages/dotnet/src/NetMetric.Guards/NetMetric.Guards.csproj" Id="74c3a98b-e015-4e01-a699-b0cbef9597d4" />
+    <Project Path="packages/dotnet/src/NetMetric.Idempotency.DistributedCache/NetMetric.Idempotency.DistributedCache.csproj" Id="8efef15b-05ba-48d8-9671-61aadb90231b" />
+    <Project Path="packages/dotnet/src/NetMetric.Idempotency.Redis/NetMetric.Idempotency.Redis.csproj" Id="7e71bfea-29ad-4a99-95d7-ada4a6be299d" />
+    <Project Path="packages/dotnet/src/NetMetric.Idempotency/NetMetric.Idempotency.csproj" Id="22cea811-cea8-4b7a-a535-14c5de230b0f" />
+    <Project Path="packages/dotnet/src/NetMetric.Localization/NetMetric.Localization.csproj" />
+    <Project Path="packages/dotnet/src/NetMetric.Media.Storage/NetMetric.Media.Storage.csproj" />
+    <Project Path="packages/dotnet/src/NetMetric.Media/NetMetric.Media.csproj" />
+    <Project Path="packages/dotnet/src/NetMetric.MediatR/NetMetric.MediatR.csproj" Id="94f2c3f0-fb2b-4113-96fa-4972bac4b685" />
+    <Project Path="packages/dotnet/src/NetMetric.Messaging.Abstractions/NetMetric.Messaging.Abstractions.csproj" />
+    <Project Path="packages/dotnet/src/NetMetric.Messaging.RabbitMq/NetMetric.Messaging.RabbitMq.csproj" />
+    <Project Path="packages/dotnet/src/NetMetric.Pagination/NetMetric.Pagination.csproj" Id="c930c9ff-4d2b-49f3-91c6-88aec02064b1" />
+    <Project Path="packages/dotnet/src/NetMetric.Persistence.EntityFrameworkCore.Auditing/NetMetric.Persistence.EntityFrameworkCore.Auditing.csproj" Id="f3884228-a78b-424f-9900-666c781ef0b1" />
+    <Project Path="packages/dotnet/src/NetMetric.Persistence.EntityFrameworkCore.SoftDelete/NetMetric.Persistence.EntityFrameworkCore.SoftDelete.csproj" Id="9ecefe61-9bbc-4927-a5cc-a58fed72c98f" />
+    <Project Path="packages/dotnet/src/NetMetric.Persistence.EntityFrameworkCore.Tenancy/NetMetric.Persistence.EntityFrameworkCore.Tenancy.csproj" Id="7f0033b6-a790-4e71-8e9a-90854392703a" />
+    <Project Path="packages/dotnet/src/NetMetric.Persistence.EntityFrameworkCore/NetMetric.Persistence.EntityFrameworkCore.csproj" Id="76fecb91-6f91-4a20-84b1-1b479775f5f4" />
+    <Project Path="packages/dotnet/src/NetMetric.Repository.EntityFrameworkCore/NetMetric.Repository.EntityFrameworkCore.csproj" Id="ffc6e40f-3def-4346-80a5-db8eca27b141" />
+    <Project Path="packages/dotnet/src/NetMetric.Repository/NetMetric.Repository.csproj" Id="8bfd31ab-5fba-4958-b219-da91d164d7f0" />
+    <Project Path="packages/dotnet/src/NetMetric.Security.EndpointGuard/NetMetric.Security.EndpointGuard.csproj" Id="245f0673-6d57-4a96-b365-c430468c925b" />
+    <Project Path="packages/dotnet/src/NetMetric.Tenancy/NetMetric.Tenancy.csproj" Id="40d7900c-7968-470e-8d08-7d784cb16a2c" />
+  </Folder>
+  <Folder Name="/platform/" />
+  <Folder Name="/platform/caching/" />
+  <Folder Name="/platform/gateway/" />
+  <Folder Name="/platform/gateway/src/">
+    <Project Path="platform/gateway/src/NetMetric.ApiGateway/NetMetric.ApiGateway.csproj" Id="b00b1069-1fa1-4f2a-9d48-195f47ff8a95" />
+  </Folder>
+  <Folder Name="/platform/gateway/tests/" />
+  <Folder Name="/platform/gateway/tests/NetMetric.ApiGateway.UnitTests/">
+    <Project Path="platform/gateway/tests/NetMetric.ApiGateway.UnitTests/NetMetric.ApiGateway.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/platform/identity/" />
+  <Folder Name="/platform/messaging/" />
+  <Folder Name="/platform/multitenancy/" />
+  <Folder Name="/platform/observability/" />
+  <Folder Name="/platform/persistence/" />
+  <Folder Name="/platform/security/" />
+  <Folder Name="/services/" />
+  <Folder Name="/services/account/" />
+  <Folder Name="/services/account/src/">
+    <Project Path="services/account/src/NetMetric.Account.API/NetMetric.Account.API.csproj" />
+    <Project Path="services/account/src/NetMetric.Account.Application/NetMetric.Account.Application.csproj" />
+    <Project Path="services/account/src/NetMetric.Account.Contracts/NetMetric.Account.Contracts.csproj" />
+    <Project Path="services/account/src/NetMetric.Account.Domain/NetMetric.Account.Domain.csproj" />
+    <Project Path="services/account/src/NetMetric.Account.Infrastructure/NetMetric.Account.Infrastructure.csproj" />
+    <Project Path="services/account/src/NetMetric.Account.Persistence/NetMetric.Account.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/services/account/tests/" />
+  <Folder Name="/services/account/tests/NetMetric.Account.Api.UnitTests/">
+    <Project Path="services/account/tests/NetMetric.Account.Api.UnitTests/NetMetric.Account.Api.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/account/tests/NetMetric.Account.Application.UnitTests/">
+    <Project Path="services/account/tests/NetMetric.Account.Application.UnitTests/NetMetric.Account.Application.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/audit/" />
+  <Folder Name="/services/auth/" />
+  <Folder Name="/services/auth/src/">
+    <Project Path="services/auth/src/NetMetric.Auth.API/NetMetric.Auth.API.csproj" Id="97a8ea43-abf2-4542-b925-52bd63658a4a" />
+    <Project Path="services/auth/src/NetMetric.Auth.Application/NetMetric.Auth.Application.csproj" Id="c981f502-7de4-491c-82c8-c7263586ea90" />
+    <Project Path="services/auth/src/NetMetric.Auth.Contracts/NetMetric.Auth.Contracts.csproj" Id="8c1593e2-c315-4d11-9f37-e93baee985b1" />
+    <Project Path="services/auth/src/NetMetric.Auth.Domain/NetMetric.Auth.Domain.csproj" Id="771f089f-6077-409b-bf3a-684005101b42" />
+    <Project Path="services/auth/src/NetMetric.Auth.Infrastructure/NetMetric.Auth.Infrastructure.csproj" Id="5406b830-cbfc-429c-8a7c-ab052969613f" />
+  </Folder>
+  <Folder Name="/services/auth/tests/">
+    <Project Path="services/auth/tests/NetMetric.Auth.Api.FunctionalTests/NetMetric.Auth.Api.FunctionalTests.csproj" />
+    <Project Path="services/auth/tests/NetMetric.Auth.Application.UnitTests/NetMetric.Auth.Application.UnitTests.csproj" />
+    <Project Path="services/auth/tests/NetMetric.Auth.ArchitectureTests/NetMetric.Auth.ArchitectureTests.csproj" />
+    <Project Path="services/auth/tests/NetMetric.Auth.Contracts.Tests/NetMetric.Auth.Contracts.Tests.csproj" />
+    <Project Path="services/auth/tests/NetMetric.Auth.Domain.UnitTests/NetMetric.Auth.Domain.UnitTests.csproj" />
+    <Project Path="services/auth/tests/NetMetric.Auth.Infrastructure.IntegrationTests/NetMetric.Auth.Infrastructure.IntegrationTests.csproj" />
+    <Project Path="services/auth/tests/NetMetric.Auth.TestKit/NetMetric.Auth.TestKit.csproj" />
+  </Folder>
+  <Folder Name="/services/billing/" />
+  <Folder Name="/services/crm/" />
+  <Folder Name="/services/crm/src/">
+    <Project Path="services/crm/src/NetMetric.CRM.API/NetMetric.CRM.API.csproj" Id="f10fda0f-31ac-4458-98ab-07d558402efe" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/" />
+  <Folder Name="/services/crm/src/modules/src/" />
+  <Folder Name="/services/crm/src/modules/src/AnalyticsReporting/">
+    <Project Path="services/crm/src/modules/AnalyticsReporting/NetMetric.CRM.AnalyticsReporting.Application/NetMetric.CRM.AnalyticsReporting.Application.csproj" />
+    <Project Path="services/crm/src/modules/AnalyticsReporting/NetMetric.CRM.AnalyticsReporting.Domain/NetMetric.CRM.AnalyticsReporting.Domain.csproj" />
+    <Project Path="services/crm/src/modules/AnalyticsReporting/NetMetric.CRM.AnalyticsReporting.Infrastructure/NetMetric.CRM.AnalyticsReporting.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/ArtificialIntelligence/">
+    <Project Path="services/crm/src/modules/ArtificialIntelligence/NetMetric.CRM.ArtificialIntelligence.Application/NetMetric.CRM.ArtificialIntelligence.Application.csproj" />
+    <Project Path="services/crm/src/modules/ArtificialIntelligence/NetMetric.CRM.ArtificialIntelligence.Contracts/NetMetric.CRM.ArtificialIntelligence.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/ArtificialIntelligence/NetMetric.CRM.ArtificialIntelligence.Domain/NetMetric.CRM.ArtificialIntelligence.Domain.csproj" />
+    <Project Path="services/crm/src/modules/ArtificialIntelligence/NetMetric.CRM.ArtificialIntelligence.Infrastructure/NetMetric.CRM.ArtificialIntelligence.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/CalendarSync/">
+    <Project Path="services/crm/src/modules/CalendarSync/NetMetric.CRM.CalendarSync.Application/NetMetric.CRM.CalendarSync.Application.csproj" />
+    <Project Path="services/crm/src/modules/CalendarSync/NetMetric.CRM.CalendarSync.Contracts/NetMetric.CRM.CalendarSync.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/CalendarSync/NetMetric.CRM.CalendarSync.Domain/NetMetric.CRM.CalendarSync.Domain.csproj" />
+    <Project Path="services/crm/src/modules/CalendarSync/NetMetric.CRM.CalendarSync.Infrastructure/NetMetric.CRM.CalendarSync.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/ContractLifecycle/">
+    <Project Path="services/crm/src/modules/ContractLifecycle/NetMetric.CRM.ContractLifecycle.Application/NetMetric.CRM.ContractLifecycle.Application.csproj" />
+    <Project Path="services/crm/src/modules/ContractLifecycle/NetMetric.CRM.ContractLifecycle.Contracts/NetMetric.CRM.ContractLifecycle.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/ContractLifecycle/NetMetric.CRM.ContractLifecycle.Domain/NetMetric.CRM.ContractLifecycle.Domain.csproj" />
+    <Project Path="services/crm/src/modules/ContractLifecycle/NetMetric.CRM.ContractLifecycle.Infrastructure/NetMetric.CRM.ContractLifecycle.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/CustomerIntelligence/">
+    <Project Path="services/crm/src/modules/CustomerIntelligence/NetMetric.CRM.CustomerIntelligence.Application/NetMetric.CRM.CustomerIntelligence.Application.csproj" />
+    <Project Path="services/crm/src/modules/CustomerIntelligence/NetMetric.CRM.CustomerIntelligence.Contracts/NetMetric.CRM.CustomerIntelligence.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/CustomerIntelligence/NetMetric.CRM.CustomerIntelligence.Domain/NetMetric.CRM.CustomerIntelligence.Domain.csproj" />
+    <Project Path="services/crm/src/modules/CustomerIntelligence/NetMetric.CRM.CustomerIntelligence.Infrastructure/NetMetric.CRM.CustomerIntelligence.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/CustomerManagement/">
+    <Project Path="services/crm/src/modules/CustomerManagement/NetMetric.CRM.CustomerManagement.Application/NetMetric.CRM.CustomerManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/CustomerManagement/NetMetric.CRM.CustomerManagement.Contracts/NetMetric.CRM.CustomerManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/CustomerManagement/NetMetric.CRM.CustomerManagement.Domain/NetMetric.CRM.CustomerManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/CustomerManagement/NetMetric.CRM.CustomerManagement.Infrastructure/NetMetric.CRM.CustomerManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/DealManagement/">
+    <Project Path="services/crm/src/modules/DealManagement/NetMetric.CRM.DealManagement.Application/NetMetric.CRM.DealManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/DealManagement/NetMetric.CRM.DealManagement.Contracts/NetMetric.CRM.DealManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/DealManagement/NetMetric.CRM.DealManagement.Domain/NetMetric.CRM.DealManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/DealManagement/NetMetric.CRM.DealManagement.Infrastructure/NetMetric.CRM.DealManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/DocumentManagement/">
+    <Project Path="services/crm/src/modules/DocumentManagement/NetMetric.CRM.DocumentManagement.Application/NetMetric.CRM.DocumentManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/DocumentManagement/NetMetric.CRM.DocumentManagement.Contracts/NetMetric.CRM.DocumentManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/DocumentManagement/NetMetric.CRM.DocumentManagement.Domain/NetMetric.CRM.DocumentManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/DocumentManagement/NetMetric.CRM.DocumentManagement.Infrastructure/NetMetric.CRM.DocumentManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/FinanceOperations/">
+    <Project Path="services/crm/src/modules/FinanceOperations/NetMetric.CRM.FinanceOperations.Application/NetMetric.CRM.FinanceOperations.Application.csproj" />
+    <Project Path="services/crm/src/modules/FinanceOperations/NetMetric.CRM.FinanceOperations.Contracts/NetMetric.CRM.FinanceOperations.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/FinanceOperations/NetMetric.CRM.FinanceOperations.Domain/NetMetric.CRM.FinanceOperations.Domain.csproj" />
+    <Project Path="services/crm/src/modules/FinanceOperations/NetMetric.CRM.FinanceOperations.Infrastructure/NetMetric.CRM.FinanceOperations.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/IntegrationHub/">
+    <Project Path="services/crm/src/modules/IntegrationHub/NetMetric.CRM.IntegrationHub.Application/NetMetric.CRM.IntegrationHub.Application.csproj" />
+    <Project Path="services/crm/src/modules/IntegrationHub/NetMetric.CRM.IntegrationHub.Domain/NetMetric.CRM.IntegrationHub.Domain.csproj" />
+    <Project Path="services/crm/src/modules/IntegrationHub/NetMetric.CRM.IntegrationHub.Infrastructure/NetMetric.CRM.IntegrationHub.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/KnowledgeBaseManagement/">
+    <Project Path="services/crm/src/modules/KnowledgeBaseManagement/NetMetric.CRM.KnowledgeBaseManagement.Application/NetMetric.CRM.KnowledgeBaseManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/KnowledgeBaseManagement/NetMetric.CRM.KnowledgeBaseManagement.Contracts/NetMetric.CRM.KnowledgeBaseManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/KnowledgeBaseManagement/NetMetric.CRM.KnowledgeBaseManagement.Domain/NetMetric.CRM.KnowledgeBaseManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/KnowledgeBaseManagement/NetMetric.CRM.KnowledgeBaseManagement.Infrastructure/NetMetric.CRM.KnowledgeBaseManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/LeadManagement/">
+    <Project Path="services/crm/src/modules/LeadManagement/NetMetric.CRM.LeadManagement.Application/NetMetric.CRM.LeadManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/LeadManagement/NetMetric.CRM.LeadManagement.Contracts/NetMetric.CRM.LeadManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/LeadManagement/NetMetric.CRM.LeadManagement.Domain/NetMetric.CRM.LeadManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/LeadManagement/NetMetric.CRM.LeadManagement.Infrastructure/NetMetric.CRM.LeadManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/MarketingAutomation/">
+    <Project Path="services/crm/src/modules/MarketingAutomation/NetMetric.CRM.MarketingAutomation.Application/NetMetric.CRM.MarketingAutomation.Application.csproj" />
+    <Project Path="services/crm/src/modules/MarketingAutomation/NetMetric.CRM.MarketingAutomation.Contracts/NetMetric.CRM.MarketingAutomation.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/MarketingAutomation/NetMetric.CRM.MarketingAutomation.Domain/NetMetric.CRM.MarketingAutomation.Domain.csproj" />
+    <Project Path="services/crm/src/modules/MarketingAutomation/NetMetric.CRM.MarketingAutomation.Infrastructure/NetMetric.CRM.MarketingAutomation.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/Omnichannel/">
+    <Project Path="services/crm/src/modules/Omnichannel/NetMetric.CRM.Omnichannel.Application/NetMetric.CRM.Omnichannel.Application.csproj" />
+    <Project Path="services/crm/src/modules/Omnichannel/NetMetric.CRM.Omnichannel.Contracts/NetMetric.CRM.Omnichannel.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/Omnichannel/NetMetric.CRM.Omnichannel.Domain/NetMetric.CRM.Omnichannel.Domain.csproj" />
+    <Project Path="services/crm/src/modules/Omnichannel/NetMetric.CRM.Omnichannel.Infrastructure/NetMetric.CRM.Omnichannel.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/OpportunityManagement/">
+    <Project Path="services/crm/src/modules/OpportunityManagement/NetMetric.CRM.OpportunityManagement.Application/NetMetric.CRM.OpportunityManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/OpportunityManagement/NetMetric.CRM.OpportunityManagement.Contracts/NetMetric.CRM.OpportunityManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/OpportunityManagement/NetMetric.CRM.OpportunityManagement.Domain/NetMetric.CRM.OpportunityManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/OpportunityManagement/NetMetric.CRM.OpportunityManagement.Infrastructure/NetMetric.CRM.OpportunityManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/PipelineManagement/">
+    <Project Path="services/crm/src/modules/PipelineManagement/NetMetric.CRM.PipelineManagement.Application/NetMetric.CRM.PipelineManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/PipelineManagement/NetMetric.CRM.PipelineManagement.Contracts/NetMetric.CRM.PipelineManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/PipelineManagement/NetMetric.CRM.PipelineManagement.Domain/NetMetric.CRM.PipelineManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/PipelineManagement/NetMetric.CRM.PipelineManagement.Infrastructure/NetMetric.CRM.PipelineManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/ProductCatalog/">
+    <Project Path="services/crm/src/modules/ProductCatalog/NetMetric.CRM.ProductCatalog.Application/NetMetric.CRM.ProductCatalog.Application.csproj" />
+    <Project Path="services/crm/src/modules/ProductCatalog/NetMetric.CRM.ProductCatalog.Contracts/NetMetric.CRM.ProductCatalog.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/ProductCatalog/NetMetric.CRM.ProductCatalog.Domain/NetMetric.CRM.ProductCatalog.Domain.csproj" />
+    <Project Path="services/crm/src/modules/ProductCatalog/NetMetric.CRM.ProductCatalog.Infrastructure/NetMetric.CRM.ProductCatalog.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/QuoteManagement/">
+    <Project Path="services/crm/src/modules/QuoteManagement/NetMetric.CRM.QuoteManagement.Application/NetMetric.CRM.QuoteManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/QuoteManagement/NetMetric.CRM.QuoteManagement.Contracts/NetMetric.CRM.QuoteManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/QuoteManagement/NetMetric.CRM.QuoteManagement.Domain/NetMetric.CRM.QuoteManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/QuoteManagement/NetMetric.CRM.QuoteManagement.Infrastructure/NetMetric.CRM.QuoteManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/SalesForecasting/">
+    <Project Path="services/crm/src/modules/SalesForecasting/NetMetric.CRM.SalesForecasting.Application/NetMetric.CRM.SalesForecasting.Application.csproj" />
+    <Project Path="services/crm/src/modules/SalesForecasting/NetMetric.CRM.SalesForecasting.Contracts/NetMetric.CRM.SalesForecasting.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/SalesForecasting/NetMetric.CRM.SalesForecasting.Domain/NetMetric.CRM.SalesForecasting.Domain.csproj" />
+    <Project Path="services/crm/src/modules/SalesForecasting/NetMetric.CRM.SalesForecasting.Infrastructure/NetMetric.CRM.SalesForecasting.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/SupportInboxIntegration/">
+    <Project Path="services/crm/src/modules/SupportInboxIntegration/NetMetric.CRM.SupportInboxIntegration.Application/NetMetric.CRM.SupportInboxIntegration.Application.csproj" />
+    <Project Path="services/crm/src/modules/SupportInboxIntegration/NetMetric.CRM.SupportInboxIntegration.Contracts/NetMetric.CRM.SupportInboxIntegration.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/SupportInboxIntegration/NetMetric.CRM.SupportInboxIntegration.Domain/NetMetric.CRM.SupportInboxIntegration.Domain.csproj" />
+    <Project Path="services/crm/src/modules/SupportInboxIntegration/NetMetric.CRM.SupportInboxIntegration.Infrastructure/NetMetric.CRM.SupportInboxIntegration.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/TagManagement/">
+    <Project Path="services/crm/src/modules/TagManagement/NetMetric.CRM.TagManagement.Application/NetMetric.CRM.TagManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/TagManagement/NetMetric.CRM.TagManagement.Contracts/NetMetric.CRM.TagManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/TagManagement/NetMetric.CRM.TagManagement.Domain/NetMetric.CRM.TagManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/TagManagement/NetMetric.CRM.TagManagement.Infrastructure/NetMetric.CRM.TagManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/TenantManagement/">
+    <Project Path="services/crm/src/modules/TenantManagement/NetMetric.CRM.TenantManagement.Application/NetMetric.CRM.TenantManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/TenantManagement/NetMetric.CRM.TenantManagement.Domain/NetMetric.CRM.TenantManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/TenantManagement/NetMetric.CRM.TenantManagement.Infrastructure/NetMetric.CRM.TenantManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/TicketManagement/">
+    <Project Path="services/crm/src/modules/TicketManagement/NetMetric.CRM.TicketManagement.Application/NetMetric.CRM.TicketManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/TicketManagement/NetMetric.CRM.TicketManagement.Contracts/NetMetric.CRM.TicketManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/TicketManagement/NetMetric.CRM.TicketManagement.Domain/NetMetric.CRM.TicketManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/TicketManagement/NetMetric.CRM.TicketManagement.Infrastructure/NetMetric.CRM.TicketManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/TicketSlaManagement/">
+    <Project Path="services/crm/src/modules/TicketSlaManagement/NetMetric.CRM.TicketSlaManagement.Application/NetMetric.CRM.TicketSlaManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/TicketSlaManagement/NetMetric.CRM.TicketSlaManagement.Contracts/NetMetric.CRM.TicketSlaManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/TicketSlaManagement/NetMetric.CRM.TicketSlaManagement.Domain/NetMetric.CRM.TicketSlaManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/TicketSlaManagement/NetMetric.CRM.TicketSlaManagement.Infrastructure/NetMetric.CRM.TicketSlaManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/TicketWorkflowManagement/">
+    <Project Path="services/crm/src/modules/TicketWorkflowManagement/NetMetric.CRM.TicketWorkflowManagement.Application/NetMetric.CRM.TicketWorkflowManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/TicketWorkflowManagement/NetMetric.CRM.TicketWorkflowManagement.Contracts/NetMetric.CRM.TicketWorkflowManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/TicketWorkflowManagement/NetMetric.CRM.TicketWorkflowManagement.Domain/NetMetric.CRM.TicketWorkflowManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/TicketWorkflowManagement/NetMetric.CRM.TicketWorkflowManagement.Infrastructure/NetMetric.CRM.TicketWorkflowManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/WorkflowAutomation/">
+    <Project Path="services/crm/src/modules/WorkflowAutomation/NetMetric.CRM.WorkflowAutomation.Application/NetMetric.CRM.WorkflowAutomation.Application.csproj" />
+    <Project Path="services/crm/src/modules/WorkflowAutomation/NetMetric.CRM.WorkflowAutomation.Contracts/NetMetric.CRM.WorkflowAutomation.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/WorkflowAutomation/NetMetric.CRM.WorkflowAutomation.Domain/NetMetric.CRM.WorkflowAutomation.Domain.csproj" />
+    <Project Path="services/crm/src/modules/WorkflowAutomation/NetMetric.CRM.WorkflowAutomation.Infrastructure/NetMetric.CRM.WorkflowAutomation.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/src/WorkManagement/">
+    <Project Path="services/crm/src/modules/WorkManagement/NetMetric.CRM.WorkManagement.Application/NetMetric.CRM.WorkManagement.Application.csproj" />
+    <Project Path="services/crm/src/modules/WorkManagement/NetMetric.CRM.WorkManagement.Contracts/NetMetric.CRM.WorkManagement.Contracts.csproj" />
+    <Project Path="services/crm/src/modules/WorkManagement/NetMetric.CRM.WorkManagement.Domain/NetMetric.CRM.WorkManagement.Domain.csproj" />
+    <Project Path="services/crm/src/modules/WorkManagement/NetMetric.CRM.WorkManagement.Infrastructure/NetMetric.CRM.WorkManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/src/modules/tests/" />
+  <Folder Name="/services/crm/src/packages/" />
+  <Folder Name="/services/crm/src/packages/src/">
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Activities/NetMetric.CRM.Activities.csproj" Id="836ce4b9-5b1e-4946-9d6e-777e942c3cb3" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Auditing/NetMetric.CRM.Auditing.csproj" Id="6269795e-ba4a-4916-833c-a674824574c9" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Authorization/NetMetric.CRM.Authorization.csproj" Id="581b9862-7e0c-413b-965f-a132da1b3dc0" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Catalog/NetMetric.CRM.Catalog.csproj" Id="0cb0953f-d5d4-4d6c-b361-7d541b395082" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Core/NetMetric.CRM.Core.csproj" Id="5ba56faf-f9cd-4e18-b4ed-a995486b3fad" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.CustomFields/NetMetric.CRM.CustomFields.csproj" Id="4a097640-6379-4f03-82d8-3576597056fe" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Documents/NetMetric.CRM.Documents.csproj" Id="7fbf6b37-57f3-4d4b-9b0d-a49d538d9d3d" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Persistence/NetMetric.CRM.Persistence.csproj" Id="a9072ec3-8cec-4233-9593-d40253827294" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Sales/NetMetric.CRM.Sales.csproj" Id="fc23c02f-2046-416c-9856-7ae443e93ec5" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.ServiceManagement/NetMetric.CRM.ServiceManagement.csproj" Id="3df17fd9-9355-45ef-be07-2c6f7a45a736" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Support/NetMetric.CRM.Support.csproj" Id="6701f8ca-5c49-47c5-856c-aff13a8fe32a" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Tagging/NetMetric.CRM.Tagging.csproj" Id="b1e83bc9-1234-42f9-8389-5ac3b38df234" />
+    <Project Path="services/crm/src/packages/src/NetMetric.CRM.Types/NetMetric.CRM.Types.csproj" Id="4e6b8c57-ef3d-485a-ae6a-09cbb5324eca" />
+  </Folder>
+  <Folder Name="/services/crm/src/packages/tests/" />
+  <Folder Name="/services/crm/tests/">
+    <Project Path="services/crm/tests/NetMetric.CRM.WorkflowAutomation.Infrastructure.UnitTests/NetMetric.CRM.WorkflowAutomation.Infrastructure.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/media/" />
+  <Folder Name="/services/notification/" />
+  <Folder Name="/services/notification/src/">
+    <Project Path="services/notification/src/NetMetric.Notification.Application/NetMetric.Notification.Application.csproj" Id="8417276c-5a11-420c-abb0-c17edac18b14" />
+    <Project Path="services/notification/src/NetMetric.Notification.Contracts/NetMetric.Notification.Contracts.csproj" Id="308474cd-9964-45b6-a166-0f638ea9e81b" />
+    <Project Path="services/notification/src/NetMetric.Notification.Domain/NetMetric.Notification.Domain.csproj" Id="c34ad864-e1c8-4640-87db-2ac5aaf8baf1" />
+    <Project Path="services/notification/src/NetMetric.Notification.Infrastructure/NetMetric.Notification.Infrastructure.csproj" Id="b86749eb-82b3-4edc-b210-8876b9953df0" />
+    <Project Path="services/notification/src/NetMetric.Notification.Worker/NetMetric.Notification.Worker.csproj" Id="50b22cc2-e9f4-4a8a-ad20-d3b3ce363d8a" />
+  </Folder>
+  <Folder Name="/services/notification/tests/" />
+  <Folder Name="/services/search/" />
+  <Folder Name="/services/search/src/">
+    <Project Path="services/search/src/NetMetric.Search.API/NetMetric.Search.API.csproj" />
+    <Project Path="services/search/src/NetMetric.Search.Application/NetMetric.Search.Application.csproj" />
+    <Project Path="services/search/src/NetMetric.Search.Contracts/NetMetric.Search.Contracts.csproj" />
+    <Project Path="services/search/src/NetMetric.Search.Domain/NetMetric.Search.Domain.csproj" />
+    <Project Path="services/search/src/NetMetric.Search.Infrastructure/NetMetric.Search.Infrastructure.csproj" />
+    <Project Path="services/search/src/NetMetric.Search.Worker/NetMetric.Search.Worker.csproj" />
+  </Folder>
+  <Folder Name="/services/search/tests/">
+    <Project Path="services/search/tests/NetMetric.Search.Application.UnitTests/NetMetric.Search.Application.UnitTests.csproj" />
+    <Project Path="services/search/tests/NetMetric.Search.ArchitectureTests/NetMetric.Search.ArchitectureTests.csproj" />
+    <Project Path="services/search/tests/NetMetric.Search.Worker.UnitTests/NetMetric.Search.Worker.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/tools/" />
+  <Folder Name="/services/tools/src/">
+    <Project Path="services/tools/src/NetMetric.Tools.API/NetMetric.Tools.API.csproj" />
+    <Project Path="services/tools/src/NetMetric.Tools.Application/NetMetric.Tools.Application.csproj" />
+    <Project Path="services/tools/src/NetMetric.Tools.Contracts/NetMetric.Tools.Contracts.csproj" />
+    <Project Path="services/tools/src/NetMetric.Tools.Domain/NetMetric.Tools.Domain.csproj" />
+    <Project Path="services/tools/src/NetMetric.Tools.Infrastructure/NetMetric.Tools.Infrastructure.csproj" />
+    <Project Path="services/tools/src/NetMetric.Tools.Persistence/NetMetric.Tools.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/services/tools/tests/">
+    <Project Path="services/tools/tests/NetMetric.Tools.Application.UnitTests/NetMetric.Tools.Application.UnitTests.csproj" />
+    <Project Path="services/tools/tests/NetMetric.Tools.Contracts.Tests/NetMetric.Tools.Contracts.Tests.csproj" />
+    <Project Path="services/tools/tests/NetMetric.Tools.Domain.UnitTests/NetMetric.Tools.Domain.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/contract/" />
+  <Folder Name="/tests/e2e/" />
+  <Folder Name="/tests/integration/" />
+  <Folder Name="/tests/performance/" />
+  <Folder Name="/tests/smoke/" />
+  <Folder Name="/tests/unit/" />
+  <Folder Name="/tools/" />
+  <Folder Name="/tools/analyzers/" />
+  <Folder Name="/tools/codegen/" />
+  <Folder Name="/tools/jwt-keygen/" />
+  <Folder Name="/tools/local-smoke/">
+    <Project Path="tools/NetMetric.LocalSmoke/NetMetric.LocalSmoke.csproj" />
+  </Folder>
+  <Folder Name="/tools/migration-bundles/" />
+
+
+  <Folder Name="/services/crm/tests/AnalyticsReporting/">
+    <Project Path="services/crm/tests/AnalyticsReporting/NetMetric.CRM.AnalyticsReporting.ArchitectureTests/NetMetric.CRM.AnalyticsReporting.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/AnalyticsReporting/NetMetric.CRM.AnalyticsReporting.UnitTests/NetMetric.CRM.AnalyticsReporting.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/ContractLifecycle/">
+    <Project Path="services/crm/tests/ContractLifecycle/NetMetric.CRM.ContractLifecycle.ArchitectureTests/NetMetric.CRM.ContractLifecycle.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/ContractLifecycle/NetMetric.CRM.ContractLifecycle.UnitTests/NetMetric.CRM.ContractLifecycle.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/CustomerIntelligence/">
+    <Project Path="services/crm/tests/CustomerIntelligence/NetMetric.CRM.CustomerIntelligence.ArchitectureTests/NetMetric.CRM.CustomerIntelligence.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/CustomerIntelligence/NetMetric.CRM.CustomerIntelligence.UnitTests/NetMetric.CRM.CustomerIntelligence.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/CustomerManagement/">
+    <Project Path="services/crm/tests/CustomerManagement/NetMetric.CRM.CustomerManagement.ArchitectureTests/NetMetric.CRM.CustomerManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/CustomerManagement/NetMetric.CRM.CustomerManagement.UnitTests/NetMetric.CRM.CustomerManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/DealManagement/">
+    <Project Path="services/crm/tests/DealManagement/NetMetric.CRM.DealManagement.ArchitectureTests/NetMetric.CRM.DealManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/DealManagement/NetMetric.CRM.DealManagement.UnitTests/NetMetric.CRM.DealManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/DocumentManagement/">
+    <Project Path="services/crm/tests/DocumentManagement/NetMetric.CRM.DocumentManagement.ArchitectureTests/NetMetric.CRM.DocumentManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/DocumentManagement/NetMetric.CRM.DocumentManagement.UnitTests/NetMetric.CRM.DocumentManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/FinanceOperations/">
+    <Project Path="services/crm/tests/FinanceOperations/NetMetric.CRM.FinanceOperations.ArchitectureTests/NetMetric.CRM.FinanceOperations.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/FinanceOperations/NetMetric.CRM.FinanceOperations.UnitTests/NetMetric.CRM.FinanceOperations.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/IntegrationHub/">
+    <Project Path="services/crm/tests/IntegrationHub/NetMetric.CRM.IntegrationHub.ArchitectureTests/NetMetric.CRM.IntegrationHub.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/IntegrationHub/NetMetric.CRM.IntegrationHub.UnitTests/NetMetric.CRM.IntegrationHub.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/KnowledgeBaseManagement/">
+    <Project Path="services/crm/tests/KnowledgeBaseManagement/NetMetric.CRM.KnowledgeBaseManagement.ArchitectureTests/NetMetric.CRM.KnowledgeBaseManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/KnowledgeBaseManagement/NetMetric.CRM.KnowledgeBaseManagement.UnitTests/NetMetric.CRM.KnowledgeBaseManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/LeadManagement/">
+    <Project Path="services/crm/tests/LeadManagement/NetMetric.CRM.LeadManagement.ArchitectureTests/NetMetric.CRM.LeadManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/LeadManagement/NetMetric.CRM.LeadManagement.UnitTests/NetMetric.CRM.LeadManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/MarketingAutomation/">
+    <Project Path="services/crm/tests/MarketingAutomation/NetMetric.CRM.MarketingAutomation.ArchitectureTests/NetMetric.CRM.MarketingAutomation.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/MarketingAutomation/NetMetric.CRM.MarketingAutomation.UnitTests/NetMetric.CRM.MarketingAutomation.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/OpportunityManagement/">
+    <Project Path="services/crm/tests/OpportunityManagement/NetMetric.CRM.OpportunityManagement.ArchitectureTests/NetMetric.CRM.OpportunityManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/OpportunityManagement/NetMetric.CRM.OpportunityManagement.UnitTests/NetMetric.CRM.OpportunityManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/PipelineManagement/">
+    <Project Path="services/crm/tests/PipelineManagement/NetMetric.CRM.PipelineManagement.ArchitectureTests/NetMetric.CRM.PipelineManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/PipelineManagement/NetMetric.CRM.PipelineManagement.UnitTests/NetMetric.CRM.PipelineManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/ProductCatalog/">
+    <Project Path="services/crm/tests/ProductCatalog/NetMetric.CRM.ProductCatalog.ArchitectureTests/NetMetric.CRM.ProductCatalog.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/ProductCatalog/NetMetric.CRM.ProductCatalog.UnitTests/NetMetric.CRM.ProductCatalog.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/QuoteManagement/">
+    <Project Path="services/crm/tests/QuoteManagement/NetMetric.CRM.QuoteManagement.ArchitectureTests/NetMetric.CRM.QuoteManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/QuoteManagement/NetMetric.CRM.QuoteManagement.UnitTests/NetMetric.CRM.QuoteManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/SalesForecasting/">
+    <Project Path="services/crm/tests/SalesForecasting/NetMetric.CRM.SalesForecasting.ArchitectureTests/NetMetric.CRM.SalesForecasting.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/SalesForecasting/NetMetric.CRM.SalesForecasting.UnitTests/NetMetric.CRM.SalesForecasting.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/SupportInboxIntegration/">
+    <Project Path="services/crm/tests/SupportInboxIntegration/NetMetric.CRM.SupportInboxIntegration.ArchitectureTests/NetMetric.CRM.SupportInboxIntegration.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/SupportInboxIntegration/NetMetric.CRM.SupportInboxIntegration.UnitTests/NetMetric.CRM.SupportInboxIntegration.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/TagManagement/">
+    <Project Path="services/crm/tests/TagManagement/NetMetric.CRM.TagManagement.ArchitectureTests/NetMetric.CRM.TagManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/TagManagement/NetMetric.CRM.TagManagement.UnitTests/NetMetric.CRM.TagManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/TenantManagement/">
+    <Project Path="services/crm/tests/TenantManagement/NetMetric.CRM.TenantManagement.ArchitectureTests/NetMetric.CRM.TenantManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/TenantManagement/NetMetric.CRM.TenantManagement.UnitTests/NetMetric.CRM.TenantManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/TicketManagement/">
+    <Project Path="services/crm/tests/TicketManagement/NetMetric.CRM.TicketManagement.ArchitectureTests/NetMetric.CRM.TicketManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/TicketManagement/NetMetric.CRM.TicketManagement.UnitTests/NetMetric.CRM.TicketManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/TicketSlaManagement/">
+    <Project Path="services/crm/tests/TicketSlaManagement/NetMetric.CRM.TicketSlaManagement.ArchitectureTests/NetMetric.CRM.TicketSlaManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/TicketSlaManagement/NetMetric.CRM.TicketSlaManagement.UnitTests/NetMetric.CRM.TicketSlaManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/TicketWorkflowManagement/">
+    <Project Path="services/crm/tests/TicketWorkflowManagement/NetMetric.CRM.TicketWorkflowManagement.ArchitectureTests/NetMetric.CRM.TicketWorkflowManagement.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/TicketWorkflowManagement/NetMetric.CRM.TicketWorkflowManagement.UnitTests/NetMetric.CRM.TicketWorkflowManagement.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/services/crm/tests/WorkflowAutomation/">
+    <Project Path="services/crm/tests/WorkflowAutomation/NetMetric.CRM.WorkflowAutomation.ArchitectureTests/NetMetric.CRM.WorkflowAutomation.ArchitectureTests.csproj" />
+    <Project Path="services/crm/tests/WorkflowAutomation/NetMetric.CRM.WorkflowAutomation.UnitTests/NetMetric.CRM.WorkflowAutomation.UnitTests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,10 @@
+// <copyright file="MergeContactRecordsCommand.cs" company="NetMetric">
+// Copyright (c) 2026 NetMetric. All rights reserved.
+// NetMetric is proprietary software. See the LICENSE file in the repository root.
+// </copyright>
+
+using MediatR;
+
+namespace NetMetric.CRM.CustomerManagement.Application.Features.Duplicates.Commands.MergeContactRecords;
+
+public sealed record MergeContactRecordsCommand(Guid TargetContactId, Guid SourceContactId) : IRequest;

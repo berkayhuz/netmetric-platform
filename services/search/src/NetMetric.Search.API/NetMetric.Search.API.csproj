@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.AspNetCore\NetMetric.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Authorization.Claims\NetMetric.Authorization.Claims.csproj" />
+    <ProjectReference Include="..\NetMetric.Search.Application\NetMetric.Search.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.Search.Contracts\NetMetric.Search.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.Search.Infrastructure\NetMetric.Search.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

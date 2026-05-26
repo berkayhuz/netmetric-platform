@@ -1,0 +1,13 @@
+// <copyright file="IQuoteOpportunityReadModelSyncService.cs" company="NetMetric">
+// Copyright (c) 2026 NetMetric. All rights reserved.
+// NetMetric is proprietary software. See the LICENSE file in the repository root.
+// </copyright>
+
+namespace NetMetric.CRM.QuoteManagement.Application.Abstractions.Services;
+
+public interface IQuoteOpportunityReadModelSyncService
+{
+    Task<QuoteOpportunityReadModelSyncResult> SyncAsync(Guid opportunityId, CancellationToken cancellationToken);
+}
+
+public sealed record QuoteOpportunityReadModelSyncResult(Guid OpportunityId, Guid? CustomerId);

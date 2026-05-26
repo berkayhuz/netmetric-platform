@@ -1,0 +1,13 @@
+{
+  "extends": "@netmetric/tsconfig/nextjs",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  }
+}

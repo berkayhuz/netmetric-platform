@@ -1,0 +1,6 @@
+@NetMetric.ApiGateway_HostAddress = http://localhost:5030
+
+GET {{NetMetric.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

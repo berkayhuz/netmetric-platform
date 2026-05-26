@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Auth.TestKit\NetMetric.Auth.TestKit.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Auth.API\NetMetric.Auth.API.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Auth.Application\NetMetric.Auth.Application.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Auth.Contracts\NetMetric.Auth.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Moq" />
+  </ItemGroup>
+</Project>

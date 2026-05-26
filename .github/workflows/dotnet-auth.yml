@@ -1,0 +1,50 @@
+name: Dotnet Backend
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: auth-backend-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CI: true
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  dotnet-backend:
+    name: Restore, Build, Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore solution
+        run: dotnet restore NetMetric.slnx --force-evaluate
+
+      - name: Build solution
+        run: dotnet build NetMetric.slnx -c Release --no-restore -m:1 -v minimal
+
+      - name: Test solution
+        run: dotnet test NetMetric.slnx -c Release --no-build -m:1 -v minimal --logger "trx;LogFileName=dotnet-tests.trx" --results-directory .test-results/dotnet
+
+      - name: Validate EF migration policy
+        run: node ./scripts/release/validate-ef-migrations.mjs
+
+      - name: Validate production configuration contract
+        run: node ./scripts/release/validate-production-config.mjs
+
+      - name: Upload test results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: dotnet-test-results
+          path: .test-results/dotnet

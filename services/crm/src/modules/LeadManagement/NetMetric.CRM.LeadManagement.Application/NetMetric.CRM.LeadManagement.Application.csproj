@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Authorization\NetMetric.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Pagination\NetMetric.Pagination.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Authorization\NetMetric.CRM.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Core\NetMetric.CRM.Core.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Sales\NetMetric.CRM.Sales.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.LeadManagement.Contracts\NetMetric.CRM.LeadManagement.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

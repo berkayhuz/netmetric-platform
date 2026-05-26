@@ -1,0 +1,218 @@
+NetMetric Proprietary License and Copyright Notice
+
+Copyright (c) 2026 Berkay Huz. All rights reserved.
+
+This software and all associated materials are proprietary, confidential, and
+copyright-protected property of Berkay Huz, unless otherwise expressly stated in
+a separate written agreement signed by the copyright holder.
+
+1. Ownership
+
+NetMetric, including but not limited to its source code, object code, binaries,
+software architecture, domain models, application logic, APIs, contracts,
+interfaces, database schemas, migrations, configuration files, deployment files,
+infrastructure definitions, scripts, documentation, user interfaces, visual
+designs, branding, logos, names, trade names, text, images, assets, workflows,
+tests, build files, and all related materials, is owned exclusively by the
+copyright holder.
+
+No ownership rights, intellectual property rights, copyright rights, patent
+rights, trademark rights, trade secret rights, database rights, moral rights, or
+any other rights are transferred to any person or entity by access to,
+possession of, viewing of, or receipt of this software.
+
+2. No Open Source License
+
+This software is not open source software.
+
+This software is not licensed under the MIT License, Apache License, GNU General
+Public License, GNU Affero General Public License, BSD License, Mozilla Public
+License, Creative Commons license, or any other open source, free software, or
+public license.
+
+No permission is granted to use this software under any open source, free
+software, permissive, copyleft, public-domain-equivalent, or community license.
+
+3. No License Granted
+
+Except where the copyright holder has granted prior express written permission,
+no person or entity is granted any license, permission, right, or authorization
+to use, copy, reproduce, modify, adapt, translate, merge, publish, distribute,
+redistribute, sublicense, sell, resell, lease, rent, lend, host, operate, expose,
+make available, transmit, disclose, commercialize, exploit, or otherwise use
+this software, in whole or in part.
+
+Access to this repository, access to a copy of the source code, access to a
+deployment, access to documentation, or access to any related material does not
+create, imply, or grant any license or usage right.
+
+All rights not expressly granted in a separate written agreement are reserved.
+
+4. Prohibited Actions
+
+Without prior express written permission from the copyright holder, the following
+actions are strictly prohibited:
+
+- Copying, cloning, downloading, scraping, mirroring, archiving, or reproducing
+  this software or any portion of it for any purpose other than temporary
+  technical viewing where such viewing is unavoidable through an authorized
+  platform.
+- Modifying, adapting, translating, refactoring, restructuring, converting, or
+  creating derivative works based on this software.
+- Distributing, publishing, uploading, sharing, forwarding, transferring,
+  sublicensing, selling, reselling, leasing, renting, or otherwise making this
+  software available to any third party.
+- Using this software for commercial, internal business, educational, research,
+  personal, public, private, governmental, nonprofit, or production purposes.
+- Deploying, hosting, running, operating, or providing this software as a
+  service, product, platform, API, website, application, or internal system.
+- Reverse engineering, decompiling, disassembling, decoding, extracting,
+  analyzing, or attempting to discover the source code, structure, algorithms,
+  architecture, trade secrets, or underlying ideas of this software, except to
+  the extent such restriction is expressly prohibited by mandatory applicable
+  law.
+- Removing, altering, obscuring, or misrepresenting any copyright notice,
+  proprietary notice, authorship notice, trademark notice, license notice, or
+  legal notice.
+- Using the name "NetMetric", related names, logos, marks, branding, domain
+  names, product names, or confusingly similar identifiers without prior express
+  written permission.
+- Using this software or any part of it to train, fine-tune, evaluate, benchmark,
+  or improve artificial intelligence systems, machine learning models, code
+  generation tools, large language models, datasets, embeddings, or automated
+  analysis systems.
+- Incorporating this software or any portion of it into another product,
+  service, repository, dataset, model, application, library, framework, or
+  commercial offering.
+- Circumventing, disabling, bypassing, or interfering with any security,
+  authentication, authorization, licensing, access control, monitoring, logging,
+  rate limiting, or usage restriction mechanism associated with this software.
+
+5. Confidentiality
+
+This software may contain confidential information, proprietary information,
+security-sensitive implementation details, business logic, infrastructure
+details, trade secrets, credentials patterns, architecture decisions, internal
+workflows, and non-public technical information.
+
+Any person or entity with access to this software must keep it confidential and
+must not disclose it to any third party without prior express written permission
+from the copyright holder.
+
+Public exposure of this software, accidental disclosure, unauthorized access, or
+temporary availability does not waive confidentiality, ownership, copyright,
+trade secret protection, or any other rights.
+
+6. Third-Party Components
+
+This software may reference, depend on, interoperate with, or include
+third-party libraries, packages, tools, frameworks, SDKs, or services.
+
+Third-party components are governed by their own respective licenses and terms.
+Nothing in this notice grants any rights to third-party components beyond the
+rights provided by their respective owners.
+
+The presence of third-party open source components does not make NetMetric open
+source and does not grant any person or entity any right to use, copy, modify,
+distribute, or exploit NetMetric itself.
+
+7. Contributions
+
+No person or entity is authorized to contribute code, documentation, designs,
+issues, suggestions, patches, pull requests, feedback, or other material to this
+software unless expressly permitted by the copyright holder.
+
+Unless otherwise agreed in a separate written agreement, any submitted
+contribution, suggestion, idea, patch, pull request, issue, or feedback may be
+rejected, removed, or ignored at the sole discretion of the copyright holder.
+
+Acceptance, discussion, or review of any contribution does not create ownership,
+license, employment, partnership, agency, joint venture, or compensation rights.
+
+8. No Implied Rights
+
+No rights are granted by implication, estoppel, custom, industry practice,
+platform behavior, repository visibility, public availability, previous access,
+oral statement, course of dealing, or course of performance.
+
+Any permission must be explicit, written, and signed by the copyright holder.
+
+9. Termination
+
+Any permission, access, or authorization granted by the copyright holder is
+automatically terminated immediately if the recipient violates this notice, any
+written agreement, or any applicable law.
+
+Upon termination or request by the copyright holder, the recipient must
+immediately stop all use of the software and permanently delete or destroy all
+copies, forks, backups, derivatives, excerpts, documentation, and related
+materials in their possession, custody, or control.
+
+10. Enforcement and Remedies
+
+Unauthorized use, copying, modification, distribution, disclosure, hosting,
+deployment, reverse engineering, or exploitation of this software may constitute
+copyright infringement, trade secret misappropriation, breach of confidentiality,
+unfair competition, breach of contract, and/or violation of other applicable
+civil, administrative, or criminal laws.
+
+The copyright holder reserves the right to seek all available remedies,
+including but not limited to injunctive relief, removal requests, takedown
+notices, damages, lost profits, statutory remedies where available, legal fees,
+costs, account suspension requests, and any other remedy available under
+applicable law.
+
+11. No Warranty
+
+This software is provided, if at all, strictly on an "as is" and "as available"
+basis.
+
+To the maximum extent permitted by applicable law, the copyright holder disclaims
+all warranties, whether express, implied, statutory, or otherwise, including but
+not limited to warranties of merchantability, fitness for a particular purpose,
+title, non-infringement, availability, security, accuracy, reliability, and
+error-free operation.
+
+12. Limitation of Liability
+
+To the maximum extent permitted by applicable law, the copyright holder shall
+not be liable for any direct, indirect, incidental, special, consequential,
+exemplary, punitive, or other damages arising from or related to this software,
+including but not limited to loss of profits, loss of data, business
+interruption, security incidents, system failures, service outages, or claims by
+third parties.
+
+13. Reservation of Rights
+
+All rights, title, and interest in and to this software are reserved by the
+copyright holder.
+
+Nothing in this notice limits or waives any rights or remedies available under
+copyright law, trademark law, patent law, trade secret law, contract law,
+database protection law, unfair competition law, cybercrime law, or any other
+applicable law.
+
+14. Governing Law and Jurisdiction
+
+Unless a separate written agreement states otherwise, this notice and any
+dispute arising from or related to this software shall be governed by the laws
+of the Republic of Türkiye, without regard to conflict of law principles.
+
+Unless mandatory applicable law requires otherwise, the courts and enforcement
+authorities located in Türkiye shall have jurisdiction over disputes arising
+from or related to this software.
+
+15. Severability
+
+If any provision of this notice is held to be invalid, illegal, or unenforceable,
+the remaining provisions shall remain in full force and effect to the maximum
+extent permitted by applicable law.
+
+16. Contact
+
+Any request for permission, licensing, commercial use, partnership, access,
+security disclosure, or legal inquiry must be submitted in writing to the
+copyright holder.
+
+Copyright (c) 2026 Berkay Huz. All rights reserved.
+Unauthorized use is strictly prohibited.

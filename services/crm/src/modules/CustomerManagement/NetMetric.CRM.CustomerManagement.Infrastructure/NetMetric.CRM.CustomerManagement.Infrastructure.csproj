@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.AspNetCore.CurrentUser\NetMetric.AspNetCore.CurrentUser.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Authorization\NetMetric.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Authorization.AspNetCore\NetMetric.Authorization.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Messaging.Abstractions\NetMetric.Messaging.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Messaging.RabbitMq\NetMetric.Messaging.RabbitMq.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Media\NetMetric.Media.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore\NetMetric.Persistence.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Auditing\NetMetric.Persistence.EntityFrameworkCore.Auditing.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.SoftDelete\NetMetric.Persistence.EntityFrameworkCore.SoftDelete.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Tenancy\NetMetric.Persistence.EntityFrameworkCore.Tenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Repository.EntityFrameworkCore\NetMetric.Repository.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Tenancy\NetMetric.Tenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.CurrentUser\NetMetric.CurrentUser.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Exceptions\NetMetric.Exceptions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Repository\NetMetric.Repository.csproj" />
+    <ProjectReference Include="..\..\..\..\..\notification\src\NetMetric.Notification.Contracts\NetMetric.Notification.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\search\src\NetMetric.Search.Contracts\NetMetric.Search.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Activities\NetMetric.CRM.Activities.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Auditing\NetMetric.CRM.Auditing.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Authorization\NetMetric.CRM.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Core\NetMetric.CRM.Core.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.CustomFields\NetMetric.CRM.CustomFields.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Documents\NetMetric.CRM.Documents.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Sales\NetMetric.CRM.Sales.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Tagging\NetMetric.CRM.Tagging.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Types\NetMetric.CRM.Types.csproj" />
+    <ProjectReference Include="..\..\ContractLifecycle\NetMetric.CRM.ContractLifecycle.Application\NetMetric.CRM.ContractLifecycle.Application.csproj" />
+    <ProjectReference Include="..\..\ContractLifecycle\NetMetric.CRM.ContractLifecycle.Domain\NetMetric.CRM.ContractLifecycle.Domain.csproj" />
+    <ProjectReference Include="..\..\CustomerIntelligence\NetMetric.CRM.CustomerIntelligence.Application\NetMetric.CRM.CustomerIntelligence.Application.csproj" />
+    <ProjectReference Include="..\..\DealManagement\NetMetric.CRM.DealManagement.Application\NetMetric.CRM.DealManagement.Application.csproj" />
+    <ProjectReference Include="..\..\FinanceOperations\NetMetric.CRM.FinanceOperations.Application\NetMetric.CRM.FinanceOperations.Application.csproj" />
+    <ProjectReference Include="..\..\FinanceOperations\NetMetric.CRM.FinanceOperations.Domain\NetMetric.CRM.FinanceOperations.Domain.csproj" />
+    <ProjectReference Include="..\..\LeadManagement\NetMetric.CRM.LeadManagement.Application\NetMetric.CRM.LeadManagement.Application.csproj" />
+    <ProjectReference Include="..\..\OpportunityManagement\NetMetric.CRM.OpportunityManagement.Application\NetMetric.CRM.OpportunityManagement.Application.csproj" />
+    <ProjectReference Include="..\..\QuoteManagement\NetMetric.CRM.QuoteManagement.Application\NetMetric.CRM.QuoteManagement.Application.csproj" />
+    <ProjectReference Include="..\..\SupportInboxIntegration\NetMetric.CRM.SupportInboxIntegration.Application\NetMetric.CRM.SupportInboxIntegration.Application.csproj" />
+    <ProjectReference Include="..\..\TicketManagement\NetMetric.CRM.TicketManagement.Application\NetMetric.CRM.TicketManagement.Application.csproj" />
+    <ProjectReference Include="..\..\WorkManagement\NetMetric.CRM.WorkManagement.Application\NetMetric.CRM.WorkManagement.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.CustomerManagement.Application\NetMetric.CRM.CustomerManagement.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.CustomerManagement.Contracts\NetMetric.CRM.CustomerManagement.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

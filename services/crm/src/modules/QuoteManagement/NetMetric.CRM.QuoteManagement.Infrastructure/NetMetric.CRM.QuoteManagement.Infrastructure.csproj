@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Auditing\NetMetric.Persistence.EntityFrameworkCore.Auditing.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.SoftDelete\NetMetric.Persistence.EntityFrameworkCore.SoftDelete.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Tenancy\NetMetric.Persistence.EntityFrameworkCore.Tenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore\NetMetric.Persistence.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Repository.EntityFrameworkCore\NetMetric.Repository.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Tenancy\NetMetric.Tenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\..\search\src\NetMetric.Search.Contracts\NetMetric.Search.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Messaging.Abstractions\NetMetric.Messaging.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Messaging.RabbitMq\NetMetric.Messaging.RabbitMq.csproj" />
+    <ProjectReference Include="..\..\ProductCatalog\NetMetric.CRM.ProductCatalog.Application\NetMetric.CRM.ProductCatalog.Application.csproj" />
+    <ProjectReference Include="..\..\CustomerManagement\NetMetric.CRM.CustomerManagement.Application\NetMetric.CRM.CustomerManagement.Application.csproj" />
+    <ProjectReference Include="..\..\OpportunityManagement\NetMetric.CRM.OpportunityManagement.Application\NetMetric.CRM.OpportunityManagement.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.QuoteManagement.Application\NetMetric.CRM.QuoteManagement.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.QuoteManagement.Contracts\NetMetric.CRM.QuoteManagement.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.QuoteManagement.Domain\NetMetric.CRM.QuoteManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

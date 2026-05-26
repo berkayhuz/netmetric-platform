@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Authorization\NetMetric.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.CurrentUser\NetMetric.CurrentUser.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Exceptions\NetMetric.Exceptions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Pagination\NetMetric.Pagination.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Repository\NetMetric.Repository.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Authorization\NetMetric.CRM.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Sales\NetMetric.CRM.Sales.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.DealManagement.Contracts\NetMetric.CRM.DealManagement.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.DealManagement.Domain\NetMetric.CRM.DealManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

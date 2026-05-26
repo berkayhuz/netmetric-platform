@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\modules\QuoteManagement\NetMetric.CRM.QuoteManagement.Application\NetMetric.CRM.QuoteManagement.Application.csproj" />
+    <ProjectReference Include="..\..\..\src\modules\QuoteManagement\NetMetric.CRM.QuoteManagement.Infrastructure\NetMetric.CRM.QuoteManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\..\search\src\NetMetric.Search.Contracts\NetMetric.Search.Contracts.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

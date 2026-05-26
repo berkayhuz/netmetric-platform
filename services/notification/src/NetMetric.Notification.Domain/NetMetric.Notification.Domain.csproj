@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Notification.Contracts\NetMetric.Notification.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

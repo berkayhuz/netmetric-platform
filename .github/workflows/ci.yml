@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  frontend:
+    name: Frontend
+    uses: ./.github/workflows/frontend.yml
+
+  dotnet-backend:
+    name: Dotnet Backend
+    uses: ./.github/workflows/dotnet-auth.yml
+
+  security:
+    name: Security
+    uses: ./.github/workflows/security.yml

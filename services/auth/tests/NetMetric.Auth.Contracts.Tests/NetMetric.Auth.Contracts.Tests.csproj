@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Auth.TestKit\NetMetric.Auth.TestKit.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Auth.Contracts\NetMetric.Auth.Contracts.csproj" />
+  </ItemGroup>
+</Project>

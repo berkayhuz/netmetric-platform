@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\modules\AnalyticsReporting\NetMetric.CRM.AnalyticsReporting.Application\NetMetric.CRM.AnalyticsReporting.Application.csproj" />
+    <ProjectReference Include="..\..\..\src\modules\AnalyticsReporting\NetMetric.CRM.AnalyticsReporting.Domain\NetMetric.CRM.AnalyticsReporting.Domain.csproj" />
+    <ProjectReference Include="..\..\..\src\modules\AnalyticsReporting\NetMetric.CRM.AnalyticsReporting.Infrastructure\NetMetric.CRM.AnalyticsReporting.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  
+</Project>

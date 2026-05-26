@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Security.EndpointGuard\NetMetric.Security.EndpointGuard.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.ArtificialIntelligence.Contracts\NetMetric.CRM.ArtificialIntelligence.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.ArtificialIntelligence.Domain\NetMetric.CRM.ArtificialIntelligence.Domain.csproj" />
+  </ItemGroup>
+  
+</Project>

@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NetMetric.Search.Worker\NetMetric.Search.Worker.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Search.Application\NetMetric.Search.Application.csproj" />
+    <ProjectReference Include="..\..\src\NetMetric.Search.Contracts\NetMetric.Search.Contracts.csproj" />
+  </ItemGroup>
+</Project>

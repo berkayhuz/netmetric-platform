@@ -1,0 +1,9 @@
+@NetMetric_CRM_API_HostAddress = https://localhost:7246
+
+GET {{NetMetric_CRM_API_HostAddress}}/health/live
+Accept: application/json
+
+###
+
+GET {{NetMetric_CRM_API_HostAddress}}/api/crm/modules
+Accept: application/json

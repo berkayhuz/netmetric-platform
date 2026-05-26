@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tools-web-env
+  namespace: netmetric
+  labels:
+    app.kubernetes.io/name: tools-web
+    app.kubernetes.io/part-of: netmetric
+data:
+  NEXT_PUBLIC_APP_NAME: "NetMetric Tools"
+  NEXT_PUBLIC_APP_ORIGIN: "https://tools.netmetric.net"
+  NEXT_PUBLIC_TOOLS_URL: "https://tools.netmetric.net"
+  NEXT_PUBLIC_AUTH_URL: "https://auth.netmetric.net"
+  NEXT_PUBLIC_API_BASE_URL: "https://api.netmetric.net"
+  NEXT_PUBLIC_NETMETRIC_COOKIE_DOMAIN: ".netmetric.net"
+  TOOLS_API_BASE_URL: "http://tools-api"
+  TOOLS_ACCESS_COOKIE_NAME: "__Secure-netmetric-access"

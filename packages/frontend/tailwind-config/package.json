@@ -1,0 +1,13 @@
+{
+  "name": "@netmetric/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src/index.css",
+    "./sources.css": "./src/sources.css"
+  }
+}

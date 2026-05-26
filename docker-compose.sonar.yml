@@ -1,0 +1,34 @@
+services:
+  netmetric-sonar-db:
+    image: postgres:17
+    container_name: netmetric-sonar-db
+    environment:
+      # Local development only. Do not reuse these credentials in shared/prod environments.
+      POSTGRES_DB: sonar
+      POSTGRES_USER: sonar
+      POSTGRES_PASSWORD: sonar
+    volumes:
+      - netmetric_sonar_db_data:/var/lib/postgresql/data
+
+  netmetric-sonarqube:
+    image: sonarqube:community
+    container_name: netmetric-sonarqube
+    depends_on:
+      - netmetric-sonar-db
+    ports:
+      - "9000:9000"
+    environment:
+      # Local development only. These values are intentionally non-production.
+      SONAR_JDBC_URL: jdbc:postgresql://netmetric-sonar-db:5432/sonar
+      SONAR_JDBC_USERNAME: sonar
+      SONAR_JDBC_PASSWORD: sonar
+    volumes:
+      - netmetric_sonarqube_data:/opt/sonarqube/data
+      - netmetric_sonarqube_extensions:/opt/sonarqube/extensions
+      - netmetric_sonarqube_logs:/opt/sonarqube/logs
+
+volumes:
+  netmetric_sonarqube_data:
+  netmetric_sonarqube_extensions:
+  netmetric_sonarqube_logs:
+  netmetric_sonar_db_data:

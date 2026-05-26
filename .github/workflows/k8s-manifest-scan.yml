@@ -1,0 +1,20 @@
+name: Kubernetes Manifest Scan
+
+on:
+  pull_request:
+  push:
+    branches: ["main", "release/**"]
+  workflow_dispatch:
+
+jobs:
+  manifest-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: stackrox/kube-linter-action@v1
+        with:
+          directory: deploy/kubernetes
+      - name: Install Checkov
+        run: pipx install checkov
+      - name: Validate manifests
+        run: node ./scripts/security/scan-k8s-manifests.mjs

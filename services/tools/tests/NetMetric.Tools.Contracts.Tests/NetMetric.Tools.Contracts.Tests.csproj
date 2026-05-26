@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NetMetric.Tools.Contracts\NetMetric.Tools.Contracts.csproj" />
+  </ItemGroup>
+</Project>

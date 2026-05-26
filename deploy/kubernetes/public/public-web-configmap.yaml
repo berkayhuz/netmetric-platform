@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: public-web-env
+  namespace: netmetric
+  labels:
+    app.kubernetes.io/name: public-web
+    app.kubernetes.io/part-of: netmetric
+data:
+  NEXT_PUBLIC_SITE_URL: "https://netmetric.net"
+  NEXT_PUBLIC_AUTH_URL: "https://auth.netmetric.net"
+  NEXT_PUBLIC_ACCOUNT_URL: "https://account.netmetric.net"
+  NEXT_PUBLIC_CRM_URL: "https://crm.netmetric.net"
+  NEXT_PUBLIC_TOOLS_URL: "https://tools.netmetric.net"
+  NEXT_PUBLIC_API_URL: "https://api.netmetric.net"
+  NEXT_PUBLIC_NETMETRIC_COOKIE_DOMAIN: ".netmetric.net"

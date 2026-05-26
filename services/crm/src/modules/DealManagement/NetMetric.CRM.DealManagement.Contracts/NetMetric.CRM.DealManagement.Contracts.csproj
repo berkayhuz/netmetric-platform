@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.CRM.DealManagement.Domain\NetMetric.CRM.DealManagement.Domain.csproj" />
+  </ItemGroup>
+  
+</Project>

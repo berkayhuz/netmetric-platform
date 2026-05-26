@@ -1,0 +1,85 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: auth-db-migrate
+  namespace: netmetric
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      serviceAccountName: auth-api
+      restartPolicy: Never
+      containers:
+        - name: migrate
+          image: ghcr.io/netmetric/auth-api:${IMAGE_TAG}
+          command:
+            [
+              "dotnet",
+              "ef",
+              "database",
+              "update",
+              "--project",
+              "services/auth/src/NetMetric.Auth.Infrastructure/NetMetric.Auth.Infrastructure.csproj",
+              "--startup-project",
+              "services/auth/src/NetMetric.Auth.API/NetMetric.Auth.API.csproj",
+            ]
+          envFrom: [{ secretRef: { name: auth-api-secrets } }]
+          resources:
+            { requests: { cpu: 100m, memory: 256Mi }, limits: { cpu: 500m, memory: 512Mi } }
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: account-db-migrate
+  namespace: netmetric
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      serviceAccountName: account-api
+      restartPolicy: Never
+      containers:
+        - name: migrate
+          image: ghcr.io/netmetric/account-api:${IMAGE_TAG}
+          command:
+            [
+              "dotnet",
+              "ef",
+              "database",
+              "update",
+              "--project",
+              "services/account/src/NetMetric.Account.Persistence/NetMetric.Account.Persistence.csproj",
+              "--startup-project",
+              "services/account/src/NetMetric.Account.API/NetMetric.Account.API.csproj",
+            ]
+          envFrom: [{ secretRef: { name: account-api-secrets } }]
+          resources:
+            { requests: { cpu: 100m, memory: 256Mi }, limits: { cpu: 500m, memory: 512Mi } }
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: crm-db-migrate
+  namespace: netmetric
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      serviceAccountName: crm-api
+      restartPolicy: Never
+      containers:
+        - name: migrate
+          image: ghcr.io/netmetric/crm-api:${IMAGE_TAG}
+          command:
+            [
+              "dotnet",
+              "ef",
+              "database",
+              "update",
+              "--project",
+              "services/crm/src/NetMetric.CRM.API/NetMetric.CRM.API.csproj",
+              "--startup-project",
+              "services/crm/src/NetMetric.CRM.API/NetMetric.CRM.API.csproj",
+            ]
+          envFrom: [{ secretRef: { name: crm-api-secrets } }]
+          resources: { requests: { cpu: 150m, memory: 384Mi }, limits: { cpu: 1000m, memory: 1Gi } }

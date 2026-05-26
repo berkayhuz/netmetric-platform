@@ -1,0 +1,25 @@
+// <copyright file="TicketLifecycleIntegrationEvents.cs" company="NetMetric">
+// Copyright (c) 2026 NetMetric. All rights reserved.
+// NetMetric is proprietary software. See the LICENSE file in the repository root.
+// </copyright>
+
+namespace NetMetric.CRM.TicketManagement.Application.IntegrationEvents;
+
+public sealed record TicketLifecycleIntegrationEventV1(
+    Guid EventId,
+    Guid TenantId,
+    Guid EntityId,
+    string EntityType,
+    string EventType,
+    Guid? OwnerUserId,
+    IReadOnlyDictionary<string, string> Metadata,
+    string? CorrelationId,
+    DateTimeOffset OccurredAtUtc)
+{
+    public const int EventVersion = 1;
+}
+
+public static class TicketManagementIntegrationEventNames
+{
+    public const string TicketPurged = "crm.ticket.purged";
+}

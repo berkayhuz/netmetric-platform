@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="libphonenumber-csharp" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Clock\NetMetric.Clock.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Media\NetMetric.Media.csproj" />
+    <ProjectReference Include="..\NetMetric.Account.Contracts\NetMetric.Account.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.Account.Domain\NetMetric.Account.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Localization\NetMetric.Localization.csproj" />
+  </ItemGroup>
+
+</Project>

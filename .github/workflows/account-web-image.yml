@@ -1,0 +1,63 @@
+name: Account Web Image
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/account-web/**"
+      - "packages/frontend/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - "turbo.json"
+      - ".github/workflows/account-web-image.yml"
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: account-web-image-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: ghcr.io/netmetric/account-web
+      NEXT_PUBLIC_APP_NAME: NetMetric Account
+      NEXT_PUBLIC_APP_ORIGIN: https://account.netmetric.net
+      NEXT_PUBLIC_ACCOUNT_URL: https://account.netmetric.net
+      NEXT_PUBLIC_AUTH_URL: https://auth.netmetric.net
+      NEXT_PUBLIC_API_BASE_URL: https://api.netmetric.net
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: apps/account-web/Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          build-args: |
+            NEXT_PUBLIC_APP_NAME=${{ env.NEXT_PUBLIC_APP_NAME }}
+            NEXT_PUBLIC_APP_ORIGIN=${{ env.NEXT_PUBLIC_APP_ORIGIN }}
+            NEXT_PUBLIC_ACCOUNT_URL=${{ env.NEXT_PUBLIC_ACCOUNT_URL }}
+            NEXT_PUBLIC_AUTH_URL=${{ env.NEXT_PUBLIC_AUTH_URL }}
+            NEXT_PUBLIC_API_BASE_URL=${{ env.NEXT_PUBLIC_API_BASE_URL }}

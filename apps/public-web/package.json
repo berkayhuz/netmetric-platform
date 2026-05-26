@@ -1,0 +1,46 @@
+{
+  "name": "public-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 7003",
+    "build": "next build",
+    "start": "next start -p 7003",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage --coverage.provider=v8 --coverage.reporter=text-summary --coverage.reporter=json-summary --coverage.reporter=lcov",
+    "test:ci": "pnpm run typecheck && pnpm run lint && pnpm run test"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@netmetric/auth": "workspace:*",
+    "@netmetric/i18n": "workspace:*",
+    "@netmetric/observability": "workspace:*",
+    "@netmetric/ui": "workspace:*",
+    "lucide-react": "^1.14.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hook-form": "^7.75.0",
+    "recharts": "^3.8.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@netmetric/eslint-config": "workspace:*",
+    "@netmetric/tailwind-config": "workspace:*",
+    "@netmetric/tsconfig": "workspace:*",
+    "@netmetric/ui": "workspace:*",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.0.3",
+    "@vitest/coverage-v8": "^4.0.3"
+  }
+}

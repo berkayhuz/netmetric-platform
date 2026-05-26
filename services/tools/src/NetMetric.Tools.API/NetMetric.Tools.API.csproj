@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.AspNetCore\NetMetric.AspNetCore.csproj" />
+    <ProjectReference Include="..\NetMetric.Tools.Application\NetMetric.Tools.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.Tools.Contracts\NetMetric.Tools.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.Tools.Infrastructure\NetMetric.Tools.Infrastructure.csproj" />
+    <ProjectReference Include="..\NetMetric.Tools.Persistence\NetMetric.Tools.Persistence.csproj" />
+  </ItemGroup>
+</Project>

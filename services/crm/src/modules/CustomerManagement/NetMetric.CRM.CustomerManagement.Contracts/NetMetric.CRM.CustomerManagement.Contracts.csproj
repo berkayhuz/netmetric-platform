@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Types\NetMetric.CRM.Types.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.CustomerManagement.Domain\NetMetric.CRM.CustomerManagement.Domain.csproj" />
+  </ItemGroup>
+  
+</Project>

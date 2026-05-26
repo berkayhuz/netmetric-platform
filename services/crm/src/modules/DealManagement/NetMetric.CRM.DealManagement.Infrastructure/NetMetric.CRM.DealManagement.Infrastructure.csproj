@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Messaging.Abstractions\NetMetric.Messaging.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Messaging.RabbitMq\NetMetric.Messaging.RabbitMq.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Auditing\NetMetric.Persistence.EntityFrameworkCore.Auditing.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.SoftDelete\NetMetric.Persistence.EntityFrameworkCore.SoftDelete.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore.Tenancy\NetMetric.Persistence.EntityFrameworkCore.Tenancy.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Persistence.EntityFrameworkCore\NetMetric.Persistence.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\search\src\NetMetric.Search.Contracts\NetMetric.Search.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Tenancy\NetMetric.Tenancy.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.DealManagement.Application\NetMetric.CRM.DealManagement.Application.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.DealManagement.Contracts\NetMetric.CRM.DealManagement.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.DealManagement.Domain\NetMetric.CRM.DealManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

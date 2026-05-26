@@ -1,0 +1,35 @@
+name: CodeQL
+
+on:
+  push:
+    branches: ["main", "release/**"]
+  pull_request:
+    branches: ["main"]
+  schedule:
+    - cron: "0 3 * * 1"
+
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ["csharp", "javascript-typescript"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - if: matrix.language == 'csharp'
+        run: |
+          dotnet restore NetMetric.slnx --force-evaluate
+          dotnet build NetMetric.slnx -c Release --no-restore -m:1 -v minimal
+      - uses: github/codeql-action/analyze@v3

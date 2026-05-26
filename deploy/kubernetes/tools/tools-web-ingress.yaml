@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tools-web
+  namespace: netmetric
+  labels:
+    app.kubernetes.io/name: tools-web
+    app.kubernetes.io/part-of: netmetric
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - tools.netmetric.net
+      secretName: tools-web-netmetric-tls
+  rules:
+    - host: tools.netmetric.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: tools-web
+                port:
+                  number: 80

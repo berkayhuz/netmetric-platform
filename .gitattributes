@@ -1,2 +1,80 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normalize line endings for text files
+* text=auto eol=lf
+
+# Windows-native scripts
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Unix scripts
+*.sh text eol=lf
+
+# .NET / solution files
+*.cs text diff=csharp
+*.csproj text
+*.fsproj text
+*.vbproj text
+*.props text
+*.targets text
+*.sln text eol=crlf
+*.slnx text
+
+# Config / infra / docs
+*.json text
+*.jsonc text
+*.xml text
+*.xaml text
+*.yml text
+*.yaml text
+*.toml text
+*.md text
+*.editorconfig text
+*.env text eol=lf
+Dockerfile text eol=lf
+*.dockerfile text eol=lf
+
+# Web sources
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.css text
+*.scss text
+*.sass text
+*.html text
+*.cshtml text
+*.mjs text
+*.cjs text
+*.mts text
+*.cts text
+
+# Git hooks
+.husky/* text eol=lf
+
+# Lockfiles should stay deterministic with LF
+package-lock.json text eol=lf
+pnpm-lock.yaml text eol=lf
+yarn.lock text eol=lf
+*.lock text eol=lf
+
+# Treat binaries as binary (no CRLF conversion, no text diff)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.7z binary
+*.dll binary
+*.exe binary
+*.pdb binary
+*.so binary
+*.dylib binary
+*.ttf binary
+*.otf binary
+*.eot binary
+*.woff binary
+*.woff2 binary

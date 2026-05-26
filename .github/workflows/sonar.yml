@@ -1,0 +1,56 @@
+name: SonarQube
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  sonar:
+    name: Sonar Scan
+    if: ${{ secrets.SONAR_TOKEN != '' && secrets.SONAR_HOST_URL != '' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Generate frontend coverage
+        run: pnpm run frontend:coverage
+
+      - name: Generate dotnet coverage summary
+        run: pnpm run dotnet:coverage
+
+      - name: Enforce coverage thresholds
+        run: pnpm run coverage:threshold
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5.3.1
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}

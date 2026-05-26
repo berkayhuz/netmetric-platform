@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.AspNetCore\NetMetric.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\..\packages\dotnet\src\NetMetric.Clock\NetMetric.Clock.csproj" />
+    <ProjectReference Include="..\NetMetric.Auth.Contracts\NetMetric.Auth.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.Auth.Domain\NetMetric.Auth.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+
+</Project>

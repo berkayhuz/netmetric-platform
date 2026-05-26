@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Authorization\NetMetric.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Exceptions\NetMetric.Exceptions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Pagination\NetMetric.Pagination.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Repository\NetMetric.Repository.csproj" />
+    <ProjectReference Include="..\..\..\packages\src\NetMetric.CRM.Authorization\NetMetric.CRM.Authorization.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.DocumentManagement.Domain\NetMetric.CRM.DocumentManagement.Domain.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.DocumentManagement.Contracts\NetMetric.CRM.DocumentManagement.Contracts.csproj" />
+  </ItemGroup>
+  
+</Project>

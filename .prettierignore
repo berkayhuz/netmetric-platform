@@ -1,0 +1,14 @@
+node_modules
+.next
+dist
+build
+coverage
+pnpm-lock.yaml
+**/packages.lock.json
+.local/dev/processes.json
+
+.runlogs
+.artifacts
+artifacts
+bin
+obj

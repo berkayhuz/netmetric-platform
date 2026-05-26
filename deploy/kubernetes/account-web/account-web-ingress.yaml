@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: account-web
+  namespace: netmetric
+  labels:
+    app.kubernetes.io/name: account-web
+    app.kubernetes.io/part-of: netmetric
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - account.netmetric.net
+      secretName: account-web-netmetric-tls
+  rules:
+    - host: account.netmetric.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: account-web
+                port:
+                  number: 80

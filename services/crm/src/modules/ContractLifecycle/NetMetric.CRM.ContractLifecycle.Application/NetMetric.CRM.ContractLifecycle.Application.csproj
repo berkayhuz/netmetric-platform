@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\packages\dotnet\src\NetMetric.Repository\NetMetric.Repository.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.ContractLifecycle.Contracts\NetMetric.CRM.ContractLifecycle.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.CRM.ContractLifecycle.Domain\NetMetric.CRM.ContractLifecycle.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

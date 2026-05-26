@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetMetric.Search.Contracts\NetMetric.Search.Contracts.csproj" />
+    <ProjectReference Include="..\NetMetric.Search.Domain\NetMetric.Search.Domain.csproj" />
+  </ItemGroup>
+</Project>
