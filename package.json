@@ -117,10 +117,10 @@
     "knip": "^5.64.1",
     "lint-staged": "^16.2.6",
     "madge": "^8.0.0",
-    "prettier": "^3.8.3",
+    "prettier": "^3.8.4",
     "sonarqube-scanner": "^4.3.6",
-    "tailwindcss": "^4.2.4",
-    "turbo": "^2.9.12",
+    "tailwindcss": "^4.3.1",
+    "turbo": "^2.9.18",
     "typescript": "5.9.3",
     "@playwright/test": "^1.56.1"
   },
