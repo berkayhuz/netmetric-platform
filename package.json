@@ -111,18 +111,18 @@
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@eslint/js": "^9.39.4",
-    "@sonar/scan": "^4.3.6",
+    "@sonar/scan": "^4.3.8",
     "eslint": "^9",
     "husky": "^9.1.7",
     "knip": "^5.64.1",
     "lint-staged": "^16.2.6",
     "madge": "^8.0.0",
-    "prettier": "^3.8.3",
-    "sonarqube-scanner": "^4.3.6",
-    "tailwindcss": "^4.2.4",
-    "turbo": "^2.9.12",
+    "prettier": "^3.9.1",
+    "sonarqube-scanner": "^4.3.8",
+    "tailwindcss": "^4.3.1",
+    "turbo": "^2.10.0",
     "typescript": "5.9.3",
-    "@playwright/test": "^1.56.1"
+    "@playwright/test": "^1.61.1"
   },
   "lint-staged": {
     "*.{md,json,yml,yaml,css,ts,tsx,js,mjs,cjs}": [
