@@ -110,19 +110,19 @@
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "@eslint/js": "^9.39.4",
-    "@sonar/scan": "^4.3.6",
+    "@eslint/js": "^9.39.5",
+    "@sonar/scan": "^4.4.0",
     "eslint": "^9",
     "husky": "^9.1.7",
     "knip": "^5.64.1",
     "lint-staged": "^16.2.6",
     "madge": "^8.0.0",
-    "prettier": "^3.8.3",
-    "sonarqube-scanner": "^4.3.6",
-    "tailwindcss": "^4.2.4",
-    "turbo": "^2.9.12",
+    "prettier": "^3.9.6",
+    "sonarqube-scanner": "^4.4.0",
+    "tailwindcss": "^4.3.3",
+    "turbo": "^2.10.7",
     "typescript": "5.9.3",
-    "@playwright/test": "^1.56.1"
+    "@playwright/test": "^1.62.1"
   },
   "lint-staged": {
     "*.{md,json,yml,yaml,css,ts,tsx,js,mjs,cjs}": [
